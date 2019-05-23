@@ -1,0 +1,14 @@
+#! /usr/bin/env /bin/bash
+
+# Show logs of specific pods
+
+PS3='Select logs : '
+pods=$(kubectl get pods --sort-by=.metadata.creationTimestamp -o go-template --template '{{range.items}}{{.metadata.name}}{{"\n"}}{{end}}')
+# String to array
+pods=$(echo $pods | tr "\n" " ")
+IFS=' ' read -r -a array <<< "$pods"
+select pod in "${array[@]}";
+do
+    echo "Showing logs of $pod"
+    kubectl logs --follow $pod
+done
