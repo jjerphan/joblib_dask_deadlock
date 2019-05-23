@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: joblib-dask-deadlock-server
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+    spec:
+      containers:
+      - name: c
+        image: jjerphan/joblib_dask_deadlock
+        imagePullPolicy: IfNotPresent # local image
+        env:
+        - name: PYTHON_VERSION
+          value: "python36"
+          valueFrom:
+        - name: PATH
+        args: ["server"]
+      restartPolicy: Never

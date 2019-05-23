@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: joblib-dask-deadlock-worker
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+    spec:
+      containers:
+      - name: c
+        image: jjerphan/joblib_dask_deadlock
+        imagePullPolicy: IfNotPresent # local image
+        env:
+        - name: PYTHON_VERSION
+          value: "python36"
+        - name: DASK_SCHEDULER_ADDRESS
+          value: PLACEHOLDER_DASK_SCHEDULER_ADDRESS
+        - name: DASK_SCHEDULER_PORT
+          value: 8687
+        - name: PATH
+        args: ["worker"]
+      restartPolicy: Never
