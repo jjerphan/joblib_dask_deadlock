@@ -27,7 +27,7 @@ RUN yum -y install epel-release \
     && yum clean all
 
 # Python modules
-COPY scripts python/scripts
+COPY scripts ./scripts
 
 # Install python dependencies
 COPY requirements.txt ./requirements.txt
@@ -36,22 +36,28 @@ COPY requirements.txt ./requirements.txt
 RUN git clone https://github.com/jjerphan/distributed.git && \
     cd distributed && \
     git checkout 1.28.0_debug && \
+    git show --summary | cat && \
     cd ..
 
 # Clone Joblib fork and checkout to debug branch
 RUN git clone https://github.com/jjerphan/joblib.git && \
     cd joblib && \
     git checkout 0.13.2_debug && \
+    git show --summary | cat && \
     cd ..
 
+# Print the system python version
+RUN python -c "import platform ; print(platform.sys.version)"
+
 # Install dependencies
+RUN pip install --upgrade pip
 RUN pip install -r ./requirements.txt
 RUN pip install Cython numpy
 RUN pip install -e joblib
 RUN pip install -e distributed
 
-# To use an independently installed version of joblib instead of the vendored
-# version.
+# To use an independently installed version of joblib instead
+# of the vendored version.
 ENV SKLEARN_SITE_JOBLIB=1
 
 # Create user home dir and set permissions
