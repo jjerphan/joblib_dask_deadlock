@@ -1,4 +1,5 @@
 import logging
+import socket
 import time
 from threading import Thread
 
@@ -40,7 +41,7 @@ if __name__ == "__main__":
 
     gs_estimator = GridSearchCV(estimator, param_grid)
 
-    dask_scheduler_port = 8786
+    scheduler_port = 8786
 
     def start_dask_scheduler():
         """
@@ -55,7 +56,7 @@ if __name__ == "__main__":
 
         scheduler = Scheduler(services=services)
 
-        scheduler_location = 'tcp://:%s' % dask_scheduler_port
+        scheduler_location = 'tcp://:%s' % scheduler_port
         scheduler.start(scheduler_location)
 
         # Tornado IOLoops are a way for Schedulers, Workers and Clients to communicate.
@@ -73,12 +74,14 @@ if __name__ == "__main__":
     # see: https://docs.python.org/2/library/threading.html#threading.Thread.daemon
     dask_scheduler_thread.daemon = True
 
-    logging.info("Dask Scheduler: starting on port %s" % dask_scheduler_port)
+    logging.info("Dask Scheduler: starting on port %s" % scheduler_port)
     dask_scheduler_thread.start()
-    logging.info("Dask Scheduler: started on port %s" % dask_scheduler_port)
+    logging.info("Dask Scheduler: started on port %s" % scheduler_port)
 
     logging.info("Creating Dask Client")
-    dask_client = Client()
+    scheduler_ip = socket.gethostbyname(socket.gethostname())
+    scheduler_address_port = "%s:%s" % (scheduler_ip, scheduler_port)
+    dask_client = Client(scheduler_address_port)
     logging.info("Created Dask Client")
 
     logging.info("Waiting for Workers to connect")
