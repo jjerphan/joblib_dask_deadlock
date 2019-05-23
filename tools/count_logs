@@ -1,7 +1,0 @@
-#! /bin/bash
-
-# Count number of identical logs
-cat $1 | \
-    sed -E 's@[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]+@@g' <&0 | \
-    sort | \
-    uniq -c

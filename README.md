@@ -1,78 +1,36 @@
-# Minimal Reproducible Bug Example: dead lock in `joblib.Parallel._lock` when using `dask` as a back-end
+# Minimal Reproducible Bug Example: for [`distributed#2149`](https://github.com/dask/distributed/issues/2149)
 
-## Overview
-
-This repository aims at reproducing a dead lock when using `joblib.Parallel` with `dask` as a back-end
-
-See the following issue: [`joblib/issues/875`](https://github.com/joblib/joblib/issues/875) for explanation.
-
-## Setup
-
-Clone this repo 
-```bash
-git clone git@github.com:jjerphan/mbr_lock.git
-cd mbr_lock
-```
+### Setup
 
 To better have an understanding of what's going on, logs have been added on branches based respectively on:
- - `1.28.0` for `distributed`
- - `0.13.2` for `joblib`
+ - [`jjerphan/distributed 1.28.0`](https://github.com/jjerphan/distributed/pull/2) for logs on `1.28.0` for `distributed`
+ - [`jjerphan/joblib 0.13.2`](https://github.com/jjerphan/joblib/pull/1) for logs on `0.13.2` for `joblib`
 
-You can have access to them cloning the following repositories and installing them as dependencies
-
-### Getting forks
-```bash
-# Distributed clone
-git clone git@github.com:jjerphan/distributed.git
-cd distributed
-git checkout 1.28.0_debug
-cd ..
-
-# Joblib clone
-git clone git@github.com:jjerphan/joblib.git
-cd joblib
-git checkout 0.13.2_debug
-cd ..
-```
-
-### Python venv
-
+Install dependencies including those two modifications of `distributed` and `joblib` with:
 
 ```bash
-python -m venv .venv
-source ./venv/bin/activate
-```
-
-Install via requirements:
-
-```bash
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-I recommand directly pulling dependencies and installing with the forks:
+### Run
+
+The the code of `example.py` in a python interpreter. Logs will appear.
+
+See [`logs.txt`](./logs.txt) for an example of such logs.
+
+
+### Inspect logs
+
+You can use scripts in the `scripts` to have a better understanding of logs
 ```bash
-pip install pandas==0.24.2
-pip install scikit-learn==0.21.1
-pip install -e ./joblib
-pip install -e ./distributed
+# To count occurrences of logs
+scripts/count_logs logs.txt
+
+# To display logs related to the lock in Parallel
+scripts/lock_logs logs.txt
+
+# To display occurrences of logs related to the lock in Parallel
+cat logs.txt | scripts/lock_logs | scripts/count_logs | sort
 ```
-
-### Reproduce deadlock
-
-Execute and output stderr and stdout in a logfile
-
-```bash
-python main.py 2>&1 | tee logs
-# then ^C when hanging
-```
-
-### Analyse logs
-
-Use scripts present in `tools`.
-
-```bash
-tools/lock_logs logs
-tools/count_logs logs 
-```
-
-

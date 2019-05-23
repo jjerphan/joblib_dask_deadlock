@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# Display logs around the lock
+cat $1 | grep -e 'lock' \
+              -e 'dispatch' \
+              -e 'BatchCompletionCallBack' | sort
