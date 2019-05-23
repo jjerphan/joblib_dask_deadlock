@@ -1,5 +1,4 @@
 import logging
-import signal
 
 import traceback, signal, sys
 

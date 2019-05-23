@@ -14,15 +14,16 @@ import distributed
 from distributed import Worker
 from tornado.ioloop import IOLoop
 
-from scripts.utils import setup_log_signal_handling
-
-logger = logging.getLogger('dask_worker')
-
+from utils import setup_log_signal_handling
 
 if __name__ == "__main__":
     setup_log_signal_handling()
 
-    scheduler_address = os.getenv('DASK_SCHEDULER_ADDRESS')
+    logger = logging.getLogger('worker')
+    logging.basicConfig(level=logging.DEBUG,
+                        format='[%(asctime)s] [%(process)s/%(threadName)s] [%(levelname)s] [%(name)s] %(message)s')
+
+    scheduler_address = os.getenv('DASK_SCHEDULER_ADDRESS', "127.0.0.1")
     scheduler_port = os.getenv('DASK_SCHEDULER_PORT', 8687)
     death_time_out = 30
 

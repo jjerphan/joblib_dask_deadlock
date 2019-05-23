@@ -10,6 +10,7 @@ RUN yum -y install epel-release \
               python-pip \
               python-devel \
               python36 \
+              python36-setuptools \
               python36-devel \
               expat \
               zip \
@@ -25,9 +26,6 @@ RUN yum -y install epel-release \
     && yum -y groupinstall "Development tools" \
     && yum -y autoremove \
     && yum clean all
-
-# Python modules
-COPY scripts ./scripts
 
 # Install python dependencies
 COPY requirements.txt ./requirements.txt
@@ -47,14 +45,17 @@ RUN git clone https://github.com/jjerphan/joblib.git && \
     cd ..
 
 # Print the system python version
-RUN python -c "import platform ; print(platform.sys.version)"
+RUN python36 -c "import platform ; print(platform.sys.version)"
 
 # Install dependencies
-RUN pip install --upgrade pip
-RUN pip install -r ./requirements.txt
-RUN pip install Cython numpy
-RUN pip install -e joblib
-RUN pip install -e distributed
+RUN easy_install-3.6 pip
+RUN pip3 install --upgrade pip
+RUN pip3 install -r ./requirements.txt
+RUN pip3 install Cython numpy
+RUN pip3 install -e joblib
+RUN pip3 install -e distributed
+
+RUN pip3 freeze
 
 # To use an independently installed version of joblib instead
 # of the vendored version.
@@ -69,6 +70,9 @@ RUN groupadd -r test_user \
 
 USER test_user
 
+# Python modules
+COPY scripts /opt/test_user/scripts
+
 # Add tini in entrypoint to used this as the init
 # instead of docker's default init process for handling signal appropriately
-ENTRYPOINT ["/usr/local/bin/tini", "--", "python", "-m", "script.entrypoint"]
+ENTRYPOINT ["/usr/local/bin/tini", "--", "python36",  "/opt/test_user/scripts/entrypoint.py"]
