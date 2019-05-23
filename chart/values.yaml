@@ -1,0 +1,26 @@
+# nameOverride: dask
+# fullnameOverride: dask
+
+server:
+  name: server
+  image:
+    repository: "jjerphan/joblib_dask_deadlock"
+    tag: latest
+    pullPolicy: Always
+  replicas: 1
+  entrypointArg: server
+  serviceType: "LoadBalancer"
+  servicePort: 8786
+
+webUI:
+  name: webui
+  servicePort: 80
+
+worker:
+  name: worker
+  image:
+    repository: "jjerphan/joblib_dask_deadlock"
+    tag: latest
+    pullPolicy: Always
+  replicas: 3
+  entrypointArg: worker

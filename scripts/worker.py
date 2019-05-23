@@ -6,6 +6,7 @@ import logging
 import os
 import signal
 import platform
+import socket
 from threading import Thread
 from time import sleep
 
@@ -23,8 +24,8 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG,
                         format='[%(asctime)s] [%(process)s/%(threadName)s] [%(levelname)s] [%(name)s] %(message)s')
 
-    scheduler_address = os.getenv('DASK_SCHEDULER_ADDRESS', "127.0.0.1")
-    scheduler_port = os.getenv('DASK_SCHEDULER_PORT', 8687)
+    scheduler_address = os.getenv('DASK_SCHEDULER_ADDRESS', "192.168.65.3")
+    scheduler_port = os.getenv('DASK_SCHEDULER_PORT', 8786)
     death_time_out = 30
 
     scheduler = "%s:%s" % (scheduler_address, scheduler_port)

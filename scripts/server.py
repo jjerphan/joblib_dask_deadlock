@@ -21,26 +21,6 @@ if __name__ == "__main__":
                         format='[%(asctime)s] [%(process)s/%(threadName)s] [%(levelname)s] [%(name)s] %(message)s')
 
     logging.info("Started reproducible example")
-    X, y = make_classification(n_samples=4898, n_features=120,
-                               n_informative=2, n_redundant=2,
-                               n_repeated=0, n_classes=2,
-                               n_clusters_per_class=2,
-                               random_state=42)
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-
-    estimator = RandomForestClassifier()
-
-    param_grid = {
-        'bootstrap': [True],
-        'max_depth': [10],
-        'min_samples_leaf': [1, 2],
-        'min_samples_split': [2],
-        'n_estimators': [200]
-    }
-
-    gs_estimator = GridSearchCV(estimator, param_grid)
-
     scheduler_port = 8786
 
     def start_dask_scheduler():
@@ -85,7 +65,27 @@ if __name__ == "__main__":
     logging.info("Created Dask Client")
 
     logging.info("Waiting for Workers to connect")
-    time.sleep(3)
+    time.sleep(5)
+
+    X, y = make_classification(n_samples=4898, n_features=120,
+                               n_informative=2, n_redundant=2,
+                               n_repeated=0, n_classes=2,
+                               n_clusters_per_class=2,
+                               random_state=42)
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+
+    estimator = RandomForestClassifier()
+
+    param_grid = {
+        'bootstrap': [True],
+        'max_depth': [10],
+        'min_samples_leaf': [1, 2],
+        'min_samples_split': [2],
+        'n_estimators': [200]
+    }
+
+    gs_estimator = GridSearchCV(estimator, param_grid)
 
     logging.info("Entering Dask Context")
     with parallel_backend("dask"):
