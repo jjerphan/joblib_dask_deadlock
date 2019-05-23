@@ -9,12 +9,11 @@ spec:
     spec:
       containers:
       - name: c
-        image: jjerphan/joblib_dask_deadlock
-        imagePullPolicy: IfNotPresent # local image
+        image: jjerphan/joblib_dask_deadlock:latest
+        imagePullPolicy: Always
         env:
         - name: PYTHON_VERSION
           value: "python36"
-          valueFrom:
         - name: PATH
         args: ["server"]
       restartPolicy: Never

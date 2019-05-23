@@ -7,6 +7,7 @@ from sklearn.datasets import make_classification
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from distributed import Client, Scheduler
+from distributed.bokeh.scheduler import BokehScheduler
 from tornado.ioloop import IOLoop
 
 from utils import setup_log_signal_handling
@@ -39,7 +40,7 @@ if __name__ == "__main__":
 
     gs_estimator = GridSearchCV(estimator, param_grid)
 
-    dask_scheduler_port = 8687
+    dask_scheduler_port = 8786
 
     def start_dask_scheduler():
         """
@@ -50,7 +51,9 @@ if __name__ == "__main__":
 
         :return:
         """
-        scheduler = Scheduler()
+        services = {('bokeh', 8787): (BokehScheduler, {'prefix': None})}
+
+        scheduler = Scheduler(services=services)
 
         scheduler_location = 'tcp://:%s' % dask_scheduler_port
         scheduler.start(scheduler_location)
