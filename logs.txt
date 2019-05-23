@@ -1,0 +1,526 @@
+[2019-07-02 17:08:27,096] [51537/MainThread] [INFO] [root] Distributed 1.28.0+15.g6ea010bc imported
+[2019-07-02 17:08:27,096] [51537/MainThread] [INFO] [root] Git revision: 6ea010bcf21db7445bd26286966f59a7e75ab390
+[2019-07-02 17:08:27,319] [51537/MainThread] [INFO] [root] Joblib 0.13.2 imported
+[2019-07-02 17:08:27,347] [51537/MainThread] [DEBUG] [asyncio] Using selector: KqueueSelector
+/Users/jjerphanion/.virtualenvs/minimal_example/lib/python3.7/site-packages/bokeh/themes/theme.py:94: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+ json = yaml.load(f)
+[2019-07-02 17:08:29,422] [51537/MainThread] [INFO] [root] Scheduler.__init__ called from __init__
+[2019-07-02 17:08:29,435] [51537/MainThread] [INFO] [root] Scheduler._setup_logging called from __init__
+[2019-07-02 17:08:29,464] [51537/IO loop] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:29,473] [51537/IO loop] [INFO] [root] Scheduler.start called from _start
+[2019-07-02 17:08:29,473] [51537/IO loop] [INFO] [root] Clear task state
+[2019-07-02 17:08:29,501] [51537/IO loop] [INFO] [root]   Scheduler at:     tcp://127.0.0.1:65372
+[2019-07-02 17:08:29,501] [51537/IO loop] [INFO] [root]       bokeh at:            127.0.0.1:8787
+[2019-07-02 17:08:29,502] [51537/IO loop] [INFO] [root] Scheduler.finished called from wrapper
+[2019-07-02 17:08:30,453] [52363/MainThread] [INFO] [root] Distributed 1.28.0+15.g6ea010bc imported
+[2019-07-02 17:08:30,453] [52363/MainThread] [INFO] [root] Git revision: 6ea010bcf21db7445bd26286966f59a7e75ab390
+/Users/jjerphanion/.virtualenvs/minimal_example/lib/python3.7/site-packages/bokeh/themes/theme.py:94: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+ json = yaml.load(f)
+/Users/jjerphanion/.virtualenvs/minimal_example/lib/python3.7/site-packages/bokeh/themes/theme.py:94: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+ json = yaml.load(f)
+[2019-07-02 17:08:34,478] [52438/MainThread] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:34,482] [52438/MainThread] [INFO] [root] Worker.__init__ called
+[2019-07-02 17:08:34,483] [52438/MainThread] [INFO] [root] Worker._setup_logging called
+[2019-07-02 17:08:34,511] [52439/MainThread] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:34,512] [52438/MainThread] [INFO] [root] Worker._start called
+[2019-07-02 17:08:34,513] [52439/MainThread] [INFO] [root] Worker.__init__ called
+[2019-07-02 17:08:34,514] [52439/MainThread] [INFO] [root] Worker._setup_logging called
+/Users/jjerphanion/.virtualenvs/minimal_example/lib/python3.7/site-packages/bokeh/themes/theme.py:94: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+ json = yaml.load(f)
+[2019-07-02 17:08:34,523] [52438/MainThread] [INFO] [root]       Start worker at:      tcp://127.0.0.1:49214
+[2019-07-02 17:08:34,524] [52438/MainThread] [INFO] [root]          Listening to:      tcp://127.0.0.1:49214
+[2019-07-02 17:08:34,525] [52438/MainThread] [INFO] [root]              nanny at:            127.0.0.1:65373
+[2019-07-02 17:08:34,527] [52438/MainThread] [INFO] [root]              bokeh at:            127.0.0.1:49215
+[2019-07-02 17:08:34,527] [52438/MainThread] [INFO] [root] Waiting to connect to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,527] [52438/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,528] [52438/MainThread] [INFO] [root]               Threads:                          1
+[2019-07-02 17:08:34,528] [52438/MainThread] [INFO] [root]                Memory:                    4.29 GB
+[2019-07-02 17:08:34,529] [52438/MainThread] [INFO] [root]       Local Directory: /Users/jjerphanion/dev/joblib_dask_deadlock/dask-worker-space/worker-wk7rriw6
+[2019-07-02 17:08:34,529] [52438/MainThread] [INFO] [root] Worker._register_with_scheduler called
+[2019-07-02 17:08:34,529] [52438/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,531] [52439/MainThread] [INFO] [root] Worker._start called
+[2019-07-02 17:08:34,542] [52452/MainThread] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:34,543] [52452/MainThread] [INFO] [root] Worker.__init__ called
+[2019-07-02 17:08:34,546] [52452/MainThread] [INFO] [root] Worker._setup_logging called
+[2019-07-02 17:08:34,553] [51537/IO loop] [INFO] [root] Scheduler.add_worker called from wrapper
+[2019-07-02 17:08:34,556] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] Scheduler.check_idle_saturated called from add_worker
+[2019-07-02 17:08:34,556] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] ws  = tcp://127.0.0.1:49214
+[2019-07-02 17:08:34,556] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] occ = 0
+[2019-07-02 17:08:34,557] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] nc  = 1
+[2019-07-02 17:08:34,557] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] p   = 0
+[2019-07-02 17:08:34,557] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] avg = 0.0
+[2019-07-02 17:08:34,557] [51537/IO loop] [INFO] [root] [029eb361-9061-44b4-8056-78d825b66bc7] tcp://127.0.0.1:49214 idle ; not saturated
+[2019-07-02 17:08:34,557] [51537/IO loop] [INFO] [root] Register tcp://127.0.0.1:49214
+[2019-07-02 17:08:34,561] [51537/IO loop] [INFO] [root] Scheduler.handle_worker called from wrapper
+[2019-07-02 17:08:34,561] [51537/IO loop] [INFO] [root] Scheduler.handle_worker: Starting worker compute stream, tcp://127.0.0.1:49214
+[2019-07-02 17:08:34,563] [51537/IO loop] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:34,563] [51537/IO loop] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] self ; id: 4712324960 ; type: <class 'distributed.scheduler.Scheduler'> ; value: <Scheduler: "tcp://127.0.0.1:65372" processes: 1 cores: 1>
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] comm ; id: 4755775784 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Scheduler connection to worker local=tcp://127.0.0.1:65372 remote=tcp://127.0.0.1:49220>
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] extra ; id: 4755874800 ; type: <class 'dict'> ; value: {'worker': 'tcp://127.0.0.1:49214'}
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] every_cycle ; id: 4706474632 ; type: <class 'list'> ; value: []
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] caller_name ; id: 4558896800 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:34,566] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:34,669] [52438/MainThread] [INFO] [root]         Registered to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,669] [52438/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,670] [52438/MainThread] [INFO] [root] Worker.handle_scheduler called
+/Users/jjerphanion/.virtualenvs/minimal_example/lib/python3.7/site-packages/bokeh/themes/theme.py:94: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+ json = yaml.load(f)
+[2019-07-02 17:08:34,686] [52452/MainThread] [INFO] [root] Worker._start called
+[2019-07-02 17:08:34,701] [52452/MainThread] [INFO] [root]       Start worker at:      tcp://127.0.0.1:49224
+[2019-07-02 17:08:34,701] [52452/MainThread] [INFO] [root]          Listening to:      tcp://127.0.0.1:49224
+[2019-07-02 17:08:34,702] [52452/MainThread] [INFO] [root]              nanny at:            127.0.0.1:65375
+[2019-07-02 17:08:34,702] [52452/MainThread] [INFO] [root]              bokeh at:            127.0.0.1:49225
+[2019-07-02 17:08:34,703] [52452/MainThread] [INFO] [root] Waiting to connect to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,704] [52452/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,704] [52452/MainThread] [INFO] [root]               Threads:                          1
+[2019-07-02 17:08:34,705] [52452/MainThread] [INFO] [root]                Memory:                    4.29 GB
+[2019-07-02 17:08:34,705] [52452/MainThread] [INFO] [root]       Local Directory: /Users/jjerphanion/dev/joblib_dask_deadlock/dask-worker-space/worker-03v88t6k
+[2019-07-02 17:08:34,706] [52452/MainThread] [INFO] [root] Worker._register_with_scheduler called
+[2019-07-02 17:08:34,706] [52452/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,713] [52439/MainThread] [INFO] [root]       Start worker at:      tcp://127.0.0.1:49218
+[2019-07-02 17:08:34,713] [52439/MainThread] [INFO] [root]          Listening to:      tcp://127.0.0.1:49218
+[2019-07-02 17:08:34,714] [52439/MainThread] [INFO] [root]              nanny at:            127.0.0.1:65374
+[2019-07-02 17:08:34,714] [52439/MainThread] [INFO] [root]              bokeh at:            127.0.0.1:49219
+[2019-07-02 17:08:34,714] [51537/IO loop] [INFO] [root] Scheduler.add_worker called from wrapper
+[2019-07-02 17:08:34,715] [52439/MainThread] [INFO] [root] Waiting to connect to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,715] [52439/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,715] [52439/MainThread] [INFO] [root]               Threads:                          1
+[2019-07-02 17:08:34,716] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] Scheduler.check_idle_saturated called from add_worker
+[2019-07-02 17:08:34,716] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] ws  = tcp://127.0.0.1:49224
+[2019-07-02 17:08:34,716] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] occ = 0
+[2019-07-02 17:08:34,716] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] nc  = 1
+[2019-07-02 17:08:34,716] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] p   = 0
+[2019-07-02 17:08:34,717] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] avg = 0.0
+[2019-07-02 17:08:34,717] [51537/IO loop] [INFO] [root] [f89ca133-dd9b-4c1f-9bfe-cb4f6ffa9688] tcp://127.0.0.1:49224 idle ; not saturated
+[2019-07-02 17:08:34,717] [51537/IO loop] [INFO] [root] Register tcp://127.0.0.1:49224
+[2019-07-02 17:08:34,719] [52452/MainThread] [INFO] [root]         Registered to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,720] [51537/IO loop] [INFO] [root] Scheduler.handle_worker called from wrapper
+[2019-07-02 17:08:34,720] [51537/IO loop] [INFO] [root] Scheduler.handle_worker: Starting worker compute stream, tcp://127.0.0.1:49224
+[2019-07-02 17:08:34,720] [52452/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,721] [52452/MainThread] [INFO] [root] Worker.handle_scheduler called
+[2019-07-02 17:08:34,721] [51537/IO loop] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:34,722] [51537/IO loop] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:34,723] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:34,723] [51537/IO loop] [INFO] [root] self ; id: 4712324960 ; type: <class 'distributed.scheduler.Scheduler'> ; value: <Scheduler: "tcp://127.0.0.1:65372" processes: 2 cores: 2>
+[2019-07-02 17:08:34,724] [51537/IO loop] [INFO] [root] comm ; id: 4755779200 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Scheduler connection to worker local=tcp://127.0.0.1:65372 remote=tcp://127.0.0.1:49226>
+[2019-07-02 17:08:34,724] [51537/IO loop] [INFO] [root] extra ; id: 4755933656 ; type: <class 'dict'> ; value: {'worker': 'tcp://127.0.0.1:49224'}
+[2019-07-02 17:08:34,724] [51537/IO loop] [INFO] [root] every_cycle ; id: 4706474632 ; type: <class 'list'> ; value: []
+[2019-07-02 17:08:34,724] [51537/IO loop] [INFO] [root] caller_name ; id: 4558896800 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:34,724] [51537/IO loop] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:34,724] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:34,716] [52439/MainThread] [INFO] [root]                Memory:                    4.29 GB
+[2019-07-02 17:08:34,726] [52439/MainThread] [INFO] [root]       Local Directory: /Users/jjerphanion/dev/joblib_dask_deadlock/dask-worker-space/worker-_2er5l9v
+[2019-07-02 17:08:34,726] [52439/MainThread] [INFO] [root] Worker._register_with_scheduler called
+[2019-07-02 17:08:34,726] [52439/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,735] [52455/MainThread] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:34,739] [52455/MainThread] [INFO] [root] Worker.__init__ called
+[2019-07-02 17:08:34,740] [51537/IO loop] [INFO] [root] Scheduler.add_worker called from wrapper
+[2019-07-02 17:08:34,740] [52455/MainThread] [INFO] [root] Worker._setup_logging called
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] Scheduler.check_idle_saturated called from add_worker
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] ws  = tcp://127.0.0.1:49218
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] occ = 0
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] nc  = 1
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] p   = 0
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] avg = 0.0
+[2019-07-02 17:08:34,742] [51537/IO loop] [INFO] [root] [5c7d3917-8bd6-4faf-bd78-a37ec877e066] tcp://127.0.0.1:49218 idle ; not saturated
+[2019-07-02 17:08:34,743] [51537/IO loop] [INFO] [root] Register tcp://127.0.0.1:49218
+[2019-07-02 17:08:34,744] [52439/MainThread] [INFO] [root]         Registered to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,744] [51537/IO loop] [INFO] [root] Scheduler.handle_worker called from wrapper
+[2019-07-02 17:08:34,744] [52439/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,745] [51537/IO loop] [INFO] [root] Scheduler.handle_worker: Starting worker compute stream, tcp://127.0.0.1:49218
+[2019-07-02 17:08:34,745] [52439/MainThread] [INFO] [root] Worker.handle_scheduler called
+[2019-07-02 17:08:34,746] [51537/IO loop] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:34,746] [51537/IO loop] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:34,747] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:34,747] [51537/IO loop] [INFO] [root] self ; id: 4712324960 ; type: <class 'distributed.scheduler.Scheduler'> ; value: <Scheduler: "tcp://127.0.0.1:65372" processes: 3 cores: 3>
+[2019-07-02 17:08:34,747] [51537/IO loop] [INFO] [root] comm ; id: 4755945512 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Scheduler connection to worker local=tcp://127.0.0.1:65372 remote=tcp://127.0.0.1:49227>
+[2019-07-02 17:08:34,748] [51537/IO loop] [INFO] [root] extra ; id: 4755963192 ; type: <class 'dict'> ; value: {'worker': 'tcp://127.0.0.1:49218'}
+[2019-07-02 17:08:34,748] [51537/IO loop] [INFO] [root] every_cycle ; id: 4706474632 ; type: <class 'list'> ; value: []
+[2019-07-02 17:08:34,748] [51537/IO loop] [INFO] [root] caller_name ; id: 4558896800 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:34,748] [51537/IO loop] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:34,748] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:34,799] [52455/MainThread] [INFO] [root] Worker._start called
+[2019-07-02 17:08:34,829] [52455/MainThread] [INFO] [root]       Start worker at:      tcp://127.0.0.1:49237
+[2019-07-02 17:08:34,829] [52455/MainThread] [INFO] [root]          Listening to:      tcp://127.0.0.1:49237
+[2019-07-02 17:08:34,830] [52455/MainThread] [INFO] [root]              nanny at:            127.0.0.1:65376
+[2019-07-02 17:08:34,830] [52455/MainThread] [INFO] [root]              bokeh at:            127.0.0.1:49238
+[2019-07-02 17:08:34,837] [52455/MainThread] [INFO] [root] Waiting to connect to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,838] [52455/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,840] [52455/MainThread] [INFO] [root]               Threads:                          1
+[2019-07-02 17:08:34,840] [52455/MainThread] [INFO] [root]                Memory:                    4.29 GB
+[2019-07-02 17:08:34,842] [52455/MainThread] [INFO] [root]       Local Directory: /Users/jjerphanion/dev/joblib_dask_deadlock/dask-worker-space/worker-xsqsuxse
+[2019-07-02 17:08:34,842] [52455/MainThread] [INFO] [root] Worker._register_with_scheduler called
+[2019-07-02 17:08:34,843] [52455/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,864] [51537/IO loop] [INFO] [root] Scheduler.add_worker called from wrapper
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] Scheduler.check_idle_saturated called from add_worker
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] ws  = tcp://127.0.0.1:49237
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] occ = 0
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] nc  = 1
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] p   = 0
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] avg = 0.0
+[2019-07-02 17:08:34,865] [51537/IO loop] [INFO] [root] [4a9c0a4e-faad-4345-b5ce-b67f1590a9f7] tcp://127.0.0.1:49237 idle ; not saturated
+[2019-07-02 17:08:34,866] [51537/IO loop] [INFO] [root] Register tcp://127.0.0.1:49237
+[2019-07-02 17:08:34,868] [51537/IO loop] [INFO] [root] Scheduler.handle_worker called from wrapper
+[2019-07-02 17:08:34,868] [51537/IO loop] [INFO] [root] Scheduler.handle_worker: Starting worker compute stream, tcp://127.0.0.1:49237
+[2019-07-02 17:08:34,869] [52455/MainThread] [INFO] [root]         Registered to:      tcp://127.0.0.1:65372
+[2019-07-02 17:08:34,870] [51537/IO loop] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:34,870] [51537/IO loop] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:34,870] [52455/MainThread] [INFO] [root] -------------------------------------------------
+[2019-07-02 17:08:34,871] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:34,871] [51537/IO loop] [INFO] [root] self ; id: 4712324960 ; type: <class 'distributed.scheduler.Scheduler'> ; value: <Scheduler: "tcp://127.0.0.1:65372" processes: 4 cores: 4>
+[2019-07-02 17:08:34,872] [51537/IO loop] [INFO] [root] comm ; id: 4755989112 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Scheduler connection to worker local=tcp://127.0.0.1:65372 remote=tcp://127.0.0.1:49239>
+[2019-07-02 17:08:34,872] [51537/IO loop] [INFO] [root] extra ; id: 4756013128 ; type: <class 'dict'> ; value: {'worker': 'tcp://127.0.0.1:49237'}
+[2019-07-02 17:08:34,872] [51537/IO loop] [INFO] [root] every_cycle ; id: 4706474632 ; type: <class 'list'> ; value: []
+[2019-07-02 17:08:34,872] [51537/IO loop] [INFO] [root] caller_name ; id: 4558896800 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:34,872] [51537/IO loop] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:34,872] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:34,871] [52455/MainThread] [INFO] [root] Worker.handle_scheduler called
+[2019-07-02 17:08:35,278] [52438/MainThread] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:35,279] [52438/MainThread] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:35,280] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,294] [52438/MainThread] [INFO] [root] self ; id: 4658533992 ; type: <class 'distributed.worker.Worker'> ; value: <Worker: tcp://127.0.0.1:49214, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>
+[2019-07-02 17:08:35,295] [52438/MainThread] [INFO] [root] comm ; id: 4668474704 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Worker->Scheduler local=tcp://127.0.0.1:49220 remote=tcp://127.0.0.1:65372>
+[2019-07-02 17:08:35,295] [52438/MainThread] [INFO] [root] extra ; id: 4669234128 ; type: <class 'dict'> ; value: {}
+[2019-07-02 17:08:35,295] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,296] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,296] [52438/MainThread] [INFO] [root] every_cycle ; id: 4669162440 ; type: <class 'list'> ; value: [<bound method Worker.ensure_communicating of <Worker: tcp://127.0.0.1:49214, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>, <bound method Worker.ensure_computing of <Worker: tcp://127.0.0.1:49214, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>]
+[2019-07-02 17:08:35,297] [52438/MainThread] [INFO] [root] caller_name ; id: 4490845016 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:35,298] [52438/MainThread] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:35,299] [52438/MainThread] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:35,477] [52455/MainThread] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:35,477] [52455/MainThread] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:35,478] [52455/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,478] [52455/MainThread] [INFO] [root] self ; id: 4658538144 ; type: <class 'distributed.worker.Worker'> ; value: <Worker: tcp://127.0.0.1:49237, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>
+[2019-07-02 17:08:35,479] [52455/MainThread] [INFO] [root] comm ; id: 4669569848 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Worker->Scheduler local=tcp://127.0.0.1:49239 remote=tcp://127.0.0.1:65372>
+[2019-07-02 17:08:35,479] [52455/MainThread] [INFO] [root] extra ; id: 4669894728 ; type: <class 'dict'> ; value: {}
+[2019-07-02 17:08:35,482] [52455/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,483] [52455/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,483] [52455/MainThread] [INFO] [root] every_cycle ; id: 4669532552 ; type: <class 'list'> ; value: [<bound method Worker.ensure_communicating of <Worker: tcp://127.0.0.1:49237, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>, <bound method Worker.ensure_computing of <Worker: tcp://127.0.0.1:49237, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>]
+[2019-07-02 17:08:35,483] [52455/MainThread] [INFO] [root] caller_name ; id: 4490845016 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:35,484] [52455/MainThread] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:35,485] [52455/MainThread] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:35,490] [52439/MainThread] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:35,491] [52439/MainThread] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:35,492] [52439/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,493] [52439/MainThread] [INFO] [root] self ; id: 4658538088 ; type: <class 'distributed.worker.Worker'> ; value: <Worker: tcp://127.0.0.1:49218, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>
+[2019-07-02 17:08:35,494] [52439/MainThread] [INFO] [root] comm ; id: 4669153008 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Worker->Scheduler local=tcp://127.0.0.1:49227 remote=tcp://127.0.0.1:65372>
+[2019-07-02 17:08:35,488] [52452/MainThread] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:35,495] [52439/MainThread] [INFO] [root] extra ; id: 4669539168 ; type: <class 'dict'> ; value: {}
+[2019-07-02 17:08:35,495] [52439/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,495] [52452/MainThread] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:35,496] [52439/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,496] [52439/MainThread] [INFO] [root] every_cycle ; id: 4669520648 ; type: <class 'list'> ; value: [<bound method Worker.ensure_communicating of <Worker: tcp://127.0.0.1:49218, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>, <bound method Worker.ensure_computing of <Worker: tcp://127.0.0.1:49218, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>]
+[2019-07-02 17:08:35,497] [52439/MainThread] [INFO] [root] caller_name ; id: 4490845016 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:35,497] [52439/MainThread] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:35,497] [52439/MainThread] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:35,497] [52452/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,499] [52452/MainThread] [INFO] [root] self ; id: 4658538144 ; type: <class 'distributed.worker.Worker'> ; value: <Worker: tcp://127.0.0.1:49224, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>
+[2019-07-02 17:08:35,499] [52452/MainThread] [INFO] [root] comm ; id: 4669156880 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Worker->Scheduler local=tcp://127.0.0.1:49226 remote=tcp://127.0.0.1:65372>
+[2019-07-02 17:08:35,500] [52452/MainThread] [INFO] [root] extra ; id: 4668330344 ; type: <class 'dict'> ; value: {}
+[2019-07-02 17:08:35,501] [52452/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,501] [52452/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:35,502] [52452/MainThread] [INFO] [root] every_cycle ; id: 4669146504 ; type: <class 'list'> ; value: [<bound method Worker.ensure_communicating of <Worker: tcp://127.0.0.1:49224, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>, <bound method Worker.ensure_computing of <Worker: tcp://127.0.0.1:49224, running, stored: 0, running: 0/1, ready: 0, comm: 0, waiting: 0>>]
+[2019-07-02 17:08:35,502] [52452/MainThread] [INFO] [root] caller_name ; id: 4490845016 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:35,502] [52452/MainThread] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:35,503] [52452/MainThread] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:35,565] [51537/MainThread] [INFO] [root] Client.__init__ called from <module>
+[2019-07-02 17:08:35,574] [51537/MainThread] [INFO] [root] Client.start called from __init__
+[2019-07-02 17:08:35,576] [51537/IO loop] [INFO] [root] Client._start called from wrapper
+[2019-07-02 17:08:35,578] [51537/IO loop] [INFO] [root] Client._ensure_connected called from wrapper
+[2019-07-02 17:08:35,585] [51537/IO loop] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:35,611] [51537/IO loop] [INFO] [root] Scheduler.add_client called from wrapper
+[2019-07-02 17:08:35,611] [51537/IO loop] [INFO] [root] Receive client connection: Client-437eac88-9cdb-11e9-8951-f01898a2278c
+[2019-07-02 17:08:35,614] [51537/IO loop] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:35,615] [51537/IO loop] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:35,719] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:35,720] [51537/IO loop] [INFO] [root] self ; id: 4712324960 ; type: <class 'distributed.scheduler.Scheduler'> ; value: <Scheduler: "tcp://127.0.0.1:65372" processes: 4 cores: 4>
+[2019-07-02 17:08:35,720] [51537/IO loop] [INFO] [root] comm ; id: 4756365096 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Scheduler->Client local=tcp://127.0.0.1:65372 remote=tcp://127.0.0.1:49270>
+[2019-07-02 17:08:35,720] [51537/IO loop] [INFO] [root] extra ; id: 4756909368 ; type: <class 'dict'> ; value: {'client': 'Client-437eac88-9cdb-11e9-8951-f01898a2278c'}
+[2019-07-02 17:08:35,721] [51537/IO loop] [INFO] [root] every_cycle ; id: 4706474632 ; type: <class 'list'> ; value: []
+[2019-07-02 17:08:35,721] [51537/IO loop] [INFO] [root] caller_name ; id: 4558896800 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:35,721] [51537/IO loop] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:35,721] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:35,745] [51537/IO loop] [INFO] [root] Client._handle_report called from wrapper
+[2019-07-02 17:08:35,763] [51537/MainThread] [INFO] [joblib.parallel] parallel_backend.__init__ called
+[2019-07-02 17:08:35,764] [51537/MainThread] [INFO] [root] _register_dask called
+[2019-07-02 17:08:35,766] [51537/MainThread] [INFO] [joblib.parallel] register_parallel_backend called on ; name: dask ; factory: DaskDistributedBackend
+[2019-07-02 17:08:35,785] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.__init__ called from __init__
+[2019-07-02 17:08:35,786] [51537/MainThread] [INFO] [root] Worker.get_client called
+[2019-07-02 17:08:35,786] [51537/MainThread] [INFO] [root] Worker.get_worker called
+[2019-07-02 17:08:35,786] [51537/MainThread] [INFO] [joblib.parallel] Parallel.__init__ called
+[2019-07-02 17:08:35,786] [51537/MainThread] [INFO] [joblib.parallel] Parallel.__call__ called
+[2019-07-02 17:08:35,786] [51537/MainThread] [INFO] [joblib.parallel] Parallel._initialize_backend called
+[2019-07-02 17:08:35,806] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.configure called from _initialize_backend
+[2019-07-02 17:08:35,815] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.effective_n_jobs called from configure
+[2019-07-02 17:08:35,826] [51537/MainThread] [INFO] [joblib.parallel] Parallel._print called
+[2019-07-02 17:08:35,826] [51537/MainThread] [INFO] [joblib.parallel] [Parallel(n_jobs=-1)]: Using backend DaskDistributedBackend with 4 concurrent workers.
+[2019-07-02 17:08:35,837] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.start_call called from __call__
+[2019-07-02 17:08:35,837] [51537/MainThread] [INFO] [joblib.parallel] Parallel.__call__: iterator created
+[2019-07-02 17:08:35,837] [51537/MainThread] [INFO] [joblib.parallel] <generator object <genexpr> at 0x11b8bfa20>
+[2019-07-02 17:08:35,843] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch called from __call__
+[2019-07-02 17:08:35,843] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: took the lock
+[2019-07-02 17:08:35,853] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.get_nested_backend called from dispatch_one_batch
+[2019-07-02 17:08:35,862] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.__init__ called from get_nested_backend
+[2019-07-02 17:08:35,862] [51537/MainThread] [INFO] [joblib.parallel] BatchedCalls.__init__ called
+[2019-07-02 17:08:35,862] [51537/MainThread] [INFO] [joblib.parallel] delayed called
+[2019-07-02 17:08:35,863] [51537/MainThread] [INFO] [joblib.parallel] BatchedCalls.__init__ : wraps 1 objects
+[2019-07-02 17:08:35,863] [51537/MainThread] [INFO] [joblib.parallel] BatchedCalls.__init__: pickle cache: {}
+[2019-07-02 17:08:35,863] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch: calling self._dispatch
+[2019-07-02 17:08:36,070] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch called from dispatch_one_batch
+[2019-07-02 17:08:36,070] [51537/MainThread] [INFO] [joblib.parallel] BatchCompletionCallBack.__init__ called
+[2019-07-02 17:08:36,070] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: taking the lock
+[2019-07-02 17:08:36,071] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: took the lock
+[2019-07-02 17:08:36,071] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: submitting job of id 0 to back-end of size 1
+[2019-07-02 17:08:36,081] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async called from _dispatch
+[2019-07-02 17:08:36,095] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args called from apply_async
+[2019-07-02 17:08:36,095] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args: Looping on func.items of len=1
+[2019-07-02 17:08:36,095] [51537/MainThread] [INFO] [joblib.dask] f: <function sum_values at 0x111596840>
+[2019-07-02 17:08:36,095] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args.maybe_to_future: scatter to Client
+[2019-07-02 17:08:36,124] [51537/MainThread] [INFO] [root] Client.scatter called from maybe_to_futures
+[2019-07-02 17:08:36,138] [51537/IO loop] [INFO] [root] Client._scatter called from wrapper
+[2019-07-02 17:08:36,143] [51537/IO loop] [INFO] [root] Worker.get_worker called
+[2019-07-02 17:08:36,149] [51537/IO loop] [INFO] [root] Scheduler.scatter called from wrapper
+[2019-07-02 17:08:36,162] [52438/MainThread] [INFO] [root] Worker.update_data called
+[2019-07-02 17:08:36,166] [51537/IO loop] [INFO] [root] Scheduler.update_data called from scatter
+[2019-07-02 17:08:36,167] [51537/IO loop] [INFO] [root] Scheduler.report called from update_data
+[2019-07-02 17:08:36,168] [51537/IO loop] [INFO] [root] Scheduler.report_on_key called from client_desires_keys
+[2019-07-02 17:08:36,169] [51537/IO loop] [INFO] [root] Scheduler.report called from report_on_key
+[2019-07-02 17:08:36,175] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args: appending tasks done
+[2019-07-02 17:08:36,194] [51537/MainThread] [INFO] [joblib.dask] Batch.__init__ called from _to_func_args
+[2019-07-02 17:08:36,194] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Submitting to Client
+[2019-07-02 17:08:36,212] [51537/MainThread] [INFO] [root] Client.submit called from apply_async
+[2019-07-02 17:08:36,224] [51537/MainThread] [INFO] [root] Client._graph_to_futures called from submit
+[2019-07-02 17:08:36,224] [51537/MainThread] [INFO] [joblib.dask] Batch.__reduce__ called
+[2019-07-02 17:08:36,224] [51537/MainThread] [INFO] [joblib.dask] Batch.__reduce__ called
+[2019-07-02 17:08:36,237] [51537/MainThread] [INFO] [root] Client._send_to_scheduler called from _graph_to_futures
+[2019-07-02 17:08:36,237] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Done submitting to the Client
+[2019-07-02 17:08:36,237] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Added future to tasks
+[2019-07-02 17:08:36,237] [51537/MainThread] [INFO] [joblib.dask] <Future: status: pending, key: sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c>
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Returning future
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.dask] <Future: status: pending, key: sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c>
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: job of id 0 inserted to back-end
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: leaving the lock
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: left the lock
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: leaving the lock after self._dispatch
+[2019-07-02 17:08:36,238] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: left the lock
+[2019-07-02 17:08:36,239] [51537/MainThread] [INFO] [joblib.parallel] Parallel.__call__ dispatched initial batch
+[2019-07-02 17:08:36,240] [51537/IO loop] [INFO] [root] Client._send_to_scheduler_safe called from null_wrapper
+[2019-07-02 17:08:36,253] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Executing callback_wrapper ; called from wrapper
+[2019-07-02 17:08:36,256] [51537/IO loop] [INFO] [root] Client._send_to_scheduler called from _release_key
+[2019-07-02 17:08:36,260] [51537/IO loop] [INFO] [root] Client._send_to_scheduler_safe called from null_wrapper
+[2019-07-02 17:08:36,263] [51537/IO loop] [INFO] [root] Server.handle_long_running: got 1 messages
+[2019-07-02 17:08:36,264] [51537/IO loop] [INFO] [root] Server.handle_long_running: message: {'op': 'update-graph', 'tasks': {'sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c': {'function': b'\x80\x04\x95\xfb\x01\x00\x00\x00\x00\x00\x00\x8c\x0cjoblib._dask\x94\x8c\x05Batch\x94\x93\x94]\x94\x8c\x17cloudpickle.cloudpickle\x94\x8c\x0e_fill_function\x94\x93\x94(h\x04\x8c\x0f_make_skel_func\x94\x93\x94h\x04\x8c\r_builtin_type\x94\x93\x94\x8c\x08CodeType\x94\x85\x94R\x94(K\x02K\x00K\x02K\x02KCC\x0c|\x00|\x01\x17\x00\xa0\x00\xa1\x00S\x00\x94N\x85\x94\x8c\x03sum\x94\x85\x94\x8c\x05array\x94\x8c\x06scalar\x94\x86\x94\x8c\x1e<ipython-input-4-239a004b20a8>\x94\x8c\nsum_values\x94K\x01C\x02\x00\x01\x94))t\x94R\x94J\xff\xff\xff\xff}\x94(\x8c\x0b__package__\x94N\x8c\x08__name__\x94\x8c\x08__main__\x94u\x87\x94R\x94}\x94(\x8c\x07globals\x94}\x94\x8c\x08defaults\x94N\x8c\x04dict\x94}\x94\x8c\x0eclosure_values\x94N\x8c\x06module\x94h\x1d\x8c\x04name\x94h\x16\x8c\x03doc\x94N\x8c\x17_cloudpickle_submodules\x94]\x94\x8c\x0bannotations\x94}\x94\x8c\x08qualname\x94h\x16\x8c\nkwdefaults\x94NutR]\x94(\x8c\x11distributed.utils\x94\x8c\nitemgetter\x94\x93\x94K\x00\x85\x94R\x94K\x05e}\x94\x87\x94a\x85\x94R\x94.', 'args': b'\x80\x04\x95.\x00\x00\x00\x00\x00\x00\x00\x8c(ndarray-d75fa45153c3389b7467c77158fdf06f\x94\x85\x94.'}}, 'dependencies': {'sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c': ('ndarray-d75fa45153c3389b7467c77158fdf06f',)}, 'keys': ('sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c',), 'restrictions': {}, 'loose_restrictions': (), 'priority': {'sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c': 0}, 'user_priority': 0, 'resources': None, 'submitting_task': None, 'retries': None, 'fifo_timeout': '100ms', 'actors': False}
+[2019-07-02 17:08:36,270] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch called from __call__
+[2019-07-02 17:08:36,270] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: took the lock
+[2019-07-02 17:08:36,274] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:36,274] [51537/IO loop] [INFO] [root] Server.handle_long_running: Using handler <bound method Scheduler.update_graph of <Scheduler: "tcp://127.0.0.1:65372" processes: 4 cores: 4>>
+[2019-07-02 17:08:36,275] [51537/IO loop] [INFO] [root] Scheduler.update_graph called from handle_stream
+[2019-07-02 17:08:36,276] [51537/IO loop] [INFO] [root] Scheduler.transitions called from update_graph
+[2019-07-02 17:08:36,278] [51537/IO loop] [INFO] [root] Scheduler.decide_worker called from transition_waiting_processing
+[2019-07-02 17:08:36,280] [51537/IO loop] [INFO] [root] Scheduler.valid_workers called from decide_worker
+[2019-07-02 17:08:36,281] [51537/IO loop] [INFO] [root] Scheduler.decide_worker called from decide_worker
+[2019-07-02 17:08:36,283] [51537/IO loop] [INFO] [root] Scheduler.consumre_resources called from transition_waiting_processing
+[2019-07-02 17:08:36,292] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] Scheduler.check_idle_saturated called from transition_waiting_processing
+[2019-07-02 17:08:36,292] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] ws  = tcp://127.0.0.1:49214
+[2019-07-02 17:08:36,292] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] occ = 0.5
+[2019-07-02 17:08:36,292] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] nc  = 1
+[2019-07-02 17:08:36,292] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] p   = 1
+[2019-07-02 17:08:36,292] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] avg = 0.125
+[2019-07-02 17:08:36,293] [51537/IO loop] [INFO] [root] [7f04285b-8291-40d6-aa7a-8e003d69990b] tcp://127.0.0.1:49214 not idle ; not saturated
+[2019-07-02 17:08:36,294] [51537/IO loop] [INFO] [root] Scheduler.send_task_to_worker called from transition_waiting_processing
+[2019-07-02 17:08:36,296] [51537/IO loop] [INFO] [root] Scheduler.worker_send called from send_task_to_worker
+[2019-07-02 17:08:36,300] [51537/IO loop] [INFO] [root] Scheduler.report_on_key called from update_graph
+[2019-07-02 17:08:36,307] [51537/IO loop] [INFO] [root] Scheduler.report called from report_on_key
+[2019-07-02 17:08:36,307] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:36,314] [52438/MainThread] [INFO] [root] Server.handle_long_running: got 1 messages
+[2019-07-02 17:08:36,315] [51537/IO loop] [INFO] [root] Server.handle_long_running: got 1 messages
+[2019-07-02 17:08:36,315] [52438/MainThread] [INFO] [root] Server.handle_long_running: message: {'op': 'compute-task', 'key': 'sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c', 'priority': (0, 1, 0), 'duration': 0.5, 'who_has': {'ndarray-d75fa45153c3389b7467c77158fdf06f': ('tcp://127.0.0.1:49214',)}, 'nbytes': {'ndarray-d75fa45153c3389b7467c77158fdf06f': 400000}, 'function': b'\x80\x04\x95\xfb\x01\x00\x00\x00\x00\x00\x00\x8c\x0cjoblib._dask\x94\x8c\x05Batch\x94\x93\x94]\x94\x8c\x17cloudpickle.cloudpickle\x94\x8c\x0e_fill_function\x94\x93\x94(h\x04\x8c\x0f_make_skel_func\x94\x93\x94h\x04\x8c\r_builtin_type\x94\x93\x94\x8c\x08CodeType\x94\x85\x94R\x94(K\x02K\x00K\x02K\x02KCC\x0c|\x00|\x01\x17\x00\xa0\x00\xa1\x00S\x00\x94N\x85\x94\x8c\x03sum\x94\x85\x94\x8c\x05array\x94\x8c\x06scalar\x94\x86\x94\x8c\x1e<ipython-input-4-239a004b20a8>\x94\x8c\nsum_values\x94K\x01C\x02\x00\x01\x94))t\x94R\x94J\xff\xff\xff\xff}\x94(\x8c\x0b__package__\x94N\x8c\x08__name__\x94\x8c\x08__main__\x94u\x87\x94R\x94}\x94(\x8c\x07globals\x94}\x94\x8c\x08defaults\x94N\x8c\x04dict\x94}\x94\x8c\x0eclosure_values\x94N\x8c\x06module\x94h\x1d\x8c\x04name\x94h\x16\x8c\x03doc\x94N\x8c\x17_cloudpickle_submodules\x94]\x94\x8c\x0bannotations\x94}\x94\x8c\x08qualname\x94h\x16\x8c\nkwdefaults\x94NutR]\x94(\x8c\x11distributed.utils\x94\x8c\nitemgetter\x94\x93\x94K\x00\x85\x94R\x94K\x05e}\x94\x87\x94a\x85\x94R\x94.', 'args': b'\x80\x04\x95.\x00\x00\x00\x00\x00\x00\x00\x8c(ndarray-d75fa45153c3389b7467c77158fdf06f\x94\x85\x94.'}
+[2019-07-02 17:08:36,315] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:36,316] [52438/MainThread] [INFO] [root] Server.handle_long_running: Using handler <bound method Worker.add_task of <Worker: tcp://127.0.0.1:49214, running, stored: 1, running: 0/1, ready: 0, comm: 0, waiting: 0>>
+[2019-07-02 17:08:36,316] [52438/MainThread] [INFO] [root] Worker.add_task called
+[2019-07-02 17:08:36,317] [52438/MainThread] [INFO] [root] Worker._deserialize called
+[2019-07-02 17:08:36,315] [51537/IO loop] [INFO] [root] Server.handle_long_running: message: {'op': 'client-releases-keys', 'keys': ('ndarray-d75fa45153c3389b7467c77158fdf06f',), 'client': 'Client-437eac88-9cdb-11e9-8951-f01898a2278c'}
+[2019-07-02 17:08:36,398] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:36,398] [51537/IO loop] [INFO] [root] Server.handle_long_running: Using handler <bound method Scheduler.client_releases_keys of <Scheduler: "tcp://127.0.0.1:65372" processes: 4 cores: 4>>
+[2019-07-02 17:08:36,399] [51537/IO loop] [INFO] [root] Scheduler.transitions called from client_releases_keys
+[2019-07-02 17:08:36,400] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] Scheduler.check_idle_saturated called from _reevaluate_occupancy_worker
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] ws  = tcp://127.0.0.1:49214
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] occ = 0.5
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] nc  = 1
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] p   = 1
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] avg = 0.125
+[2019-07-02 17:08:36,403] [51537/IO loop] [INFO] [root] [f74a3a41-335b-41bf-812d-f218d9819cc0] tcp://127.0.0.1:49214 not idle ; not saturated
+[2019-07-02 17:08:36,420] [52438/MainThread] [INFO] [root] Joblib 0.13.2 imported
+[2019-07-02 17:08:36,467] [52438/MainThread] [INFO] [joblib.dask] Batch.__init__ called from loads
+[2019-07-02 17:08:36,468] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:36,468] [52438/MainThread] [INFO] [root] Server.handle_long_running: func: <bound method Worker.ensure_communicating of <Worker: tcp://127.0.0.1:49214, running, stored: 1, running: 0/1, ready: 1, comm: 0, waiting: 0>>
+[2019-07-02 17:08:36,469] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:36,469] [52438/MainThread] [INFO] [root] Server.handle_long_running: func: <bound method Worker.ensure_computing of <Worker: tcp://127.0.0.1:49214, running, stored: 1, running: 0/1, ready: 1, comm: 0, waiting: 0>>
+[2019-07-02 17:08:36,470] [52438/MainThread] [INFO] [root] Worker.ensure_computing called
+[2019-07-02 17:08:36,471] [52438/MainThread] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:36,483] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.get_nested_backend called from dispatch_one_batch
+[2019-07-02 17:08:36,506] [52438/MainThread] [INFO] [root] Worker.execute called
+[2019-07-02 17:08:36,510] [52438/MainThread] [INFO] [root] Worker.executor_submit called
+[2019-07-02 17:08:36,512] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.dask] Batch.__call__ called from apply_function
+[2019-07-02 17:08:36,512] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.parallel] parallel_backend.__init__ called
+[2019-07-02 17:08:36,513] [52438/Dask-Worker-Threads'-52438-2] [INFO] [root] _register_dask called
+[2019-07-02 17:08:36,513] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.parallel] register_parallel_backend called on ; name: dask ; factory: DaskDistributedBackend
+[2019-07-02 17:08:36,514] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.dask] DaskDistributedBackend.__init__ called from __init__
+[2019-07-02 17:08:36,515] [52438/Dask-Worker-Threads'-52438-2] [INFO] [root] Worker.get_client called
+[2019-07-02 17:08:36,515] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] Scheduler.check_idle_saturated called from _reevaluate_occupancy_worker
+[2019-07-02 17:08:36,515] [52438/Dask-Worker-Threads'-52438-2] [INFO] [root] Worker.get_worker called
+[2019-07-02 17:08:36,515] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] ws  = tcp://127.0.0.1:49214
+[2019-07-02 17:08:36,515] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] occ = 0.5
+[2019-07-02 17:08:36,515] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] nc  = 1
+[2019-07-02 17:08:36,516] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] p   = 1
+[2019-07-02 17:08:36,516] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] avg = 0.125
+[2019-07-02 17:08:36,516] [51537/IO loop] [INFO] [root] [39228ac7-b5b2-49e5-8dfa-30ca59136966] tcp://127[2019-07-02 17:08:36,515] [52438/Dask-Worker-Threads'-52438-2] [INFO] [root] Worker._get_client called
+.0.0.1:49214 not idle ; not saturated
+[2019-07-02 17:08:36,516] [52438/Dask-Worker-Threads'-52438-2] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:36,519] [52438/Dask-Worker-Threads'-52438-2] [INFO] [root] Client.__init__ called from _get_client
+[2019-07-02 17:08:36,521] [52438/Dask-Worker-Threads'-52438-2] [INFO] [root] Client.start called from __init__
+[2019-07-02 17:08:36,522] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.__init__ called from get_nested_backend
+[2019-07-02 17:08:36,523] [51537/MainThread] [INFO] [joblib.parallel] BatchedCalls.__init__ called
+[2019-07-02 17:08:36,523] [52438/IO loop] [DEBUG] [asyncio] Using selector: KqueueSelector
+[2019-07-02 17:08:36,524] [51537/MainThread] [INFO] [joblib.parallel] delayed called
+[2019-07-02 17:08:36,524] [51537/MainThread] [INFO] [joblib.parallel] BatchedCalls.__init__ : wraps 1 objects
+[2019-07-02 17:08:36,524] [51537/MainThread] [INFO] [joblib.parallel] BatchedCalls.__init__: pickle cache: {}
+[2019-07-02 17:08:36,524] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch: calling self._dispatch
+[2019-07-02 17:08:36,541] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch called from dispatch_one_batch
+[2019-07-02 17:08:36,541] [51537/MainThread] [INFO] [joblib.parallel] BatchCompletionCallBack.__init__ called
+[2019-07-02 17:08:36,541] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: taking the lock
+[2019-07-02 17:08:36,541] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: took the lock
+[2019-07-02 17:08:36,541] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: submitting job of id 1 to back-end of size 1
+[2019-07-02 17:08:36,542] [52438/MainThread] [INFO] [root] Client._start called from wrapper
+[2019-07-02 17:08:36,560] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async called from _dispatch
+[2019-07-02 17:08:36,561] [52438/MainThread] [INFO] [root] Client._ensure_connected called from wrapper
+[2019-07-02 17:08:36,573] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:36,575] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args called from apply_async
+[2019-07-02 17:08:36,575] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args: Looping on func.items of len=1
+[2019-07-02 17:08:36,575] [51537/MainThread] [INFO] [joblib.dask] f: <function sum_values at 0x111596840>
+[2019-07-02 17:08:36,575] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args.maybe_to_future: scatter to Client
+[2019-07-02 17:08:36,587] [51537/MainThread] [INFO] [root] Client.scatter called from maybe_to_futures
+[2019-07-02 17:08:36,594] [51537/IO loop] [INFO] [root] Scheduler.add_client called from wrapper
+[2019-07-02 17:08:36,594] [51537/IO loop] [INFO] [root] Receive client connection: Client-worker-4410418c-9cdb-11e9-8cd6-f01898a2278c
+[2019-07-02 17:08:36,597] [51537/IO loop] [INFO] [root] Server.handle_long_running called from wrapper
+[2019-07-02 17:08:36,597] [51537/IO loop] [INFO] [root] Server.handle_long_running arguments
+[2019-07-02 17:08:36,599] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:36,599] [51537/IO loop] [INFO] [root] self ; id: 4712324960 ; type: <class 'distributed.scheduler.Scheduler'> ; value: <Scheduler: "tcp://127.0.0.1:65372" processes: 4 cores: 4>
+[2019-07-02 17:08:36,599] [51537/IO loop] [INFO] [root] comm ; id: 4757280304 ; type: <class 'distributed.comm.tcp.TCP'> ; value: <TCP Scheduler->Client local=tcp://127.0.0.1:65372 remote=tcp://127.0.0.1:49320>
+[2019-07-02 17:08:36,599] [51537/IO loop] [INFO] [root] extra ; id: 4758025344 ; type: <class 'dict'> ; value: {'client': 'Client-worker-4410418c-9cdb-11e9-8cd6-f01898a2278c'}
+[2019-07-02 17:08:36,600] [51537/IO loop] [INFO] [root] every_cycle ; id: 4706474632 ; type: <class 'list'> ; value: []
+[2019-07-02 17:08:36,600] [51537/IO loop] [INFO] [root] caller_name ; id: 4558896800 ; type: <class 'str'> ; value: wrapper
+[2019-07-02 17:08:36,600] [51537/IO loop] [INFO] [root] Server.handle_long_running: Starting established connection
+[2019-07-02 17:08:36,600] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:36,602] [51537/IO loop] [INFO] [root] Client._scatter called from wrapper
+[2019-07-02 17:08:36,603] [51537/IO loop] [INFO] [root] Worker.get_worker called
+[2019-07-02 17:08:36,611] [51537/IO loop] [INFO] [root] Scheduler.scatter called from wrapper
+[2019-07-02 17:08:36,618] [52439/MainThread] [INFO] [root] Worker.update_data called
+[2019-07-02 17:08:36,620] [52438/MainThread] [INFO] [root] Client._handle_report called from wrapper
+[2019-07-02 17:08:36,621] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.dask] Batch.__call__: executing <function sum_values at 0x1165770d0>
+[2019-07-02 17:08:36,622] [51537/IO loop] [INFO] [root] Scheduler.update_data called from scatter
+[2019-07-02 17:08:36,622] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.dask] Batch.__call__: done executing <function sum_values at 0x1165770d0>
+[2019-07-02 17:08:36,623] [52438/Dask-Worker-Threads'-52438-2] [INFO] [joblib.dask] Batch.__call__: done
+[2019-07-02 17:08:36,624] [52438/MainThread] [INFO] [root] Worker.ensure_computing called
+[2019-07-02 17:08:36,624] [51537/IO loop] [INFO] [root] Scheduler.report called from update_data
+[2019-07-02 17:08:36,626] [51537/IO loop] [INFO] [root] Scheduler.report_on_key called from client_desires_keys
+[2019-07-02 17:08:36,628] [51537/IO loop] [INFO] [root] Scheduler.report called from report_on_key
+[2019-07-02 17:08:36,630] [51537/IO loop] [INFO] [root] Server.handle_long_running: got 1 messages
+[2019-07-02 17:08:36,630] [51537/IO loop] [INFO] [root] Server.handle_long_running: message: {'op': 'task-finished', 'status': 'OK', 'key': 'sum_values-batch-8f0f045ce2c04dd49ad1b6145066658c', 'nbytes': 128, 'thread': 123145489821696, 'type': b'\x80\x04\x95\x15\x00\x00\x00\x00\x00\x00\x00\x8c\x08builtins\x94\x8c\x04list\x94\x93\x94.', 'typename': 'builtins.list', 'startstops': (('deserialize', 1562080116.3169868, 1562080116.468364), ('compute', 1562080116.5288692, 1562080116.6408622))}
+[2019-07-02 17:08:36,631] [51537/IO loop] [INFO] [root] Scheduler.__repr__ called from handle_stream
+[2019-07-02 17:08:36,631] [51537/IO loop] [INFO] [root] Server.handle_long_running: Using handler <bound method Scheduler.handle_task_finished of <Scheduler: "tcp://127.0.0.1:65372" processes: 4 cores: 4>>
+[2019-07-02 17:08:36,632] [51537/IO loop] [INFO] [root] Scheduler.handle_task_finished called from handle_stream
+[2019-07-02 17:08:36,634] [51537/IO loop] [INFO] [root] Scheduler._remove_from_processing called from transition_processing_memory
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] Scheduler.check_idle_saturated called from _remove_from_processing
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] ws  = tcp://127.0.0.1:49214
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] occ = 0
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] nc  = 1
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] p   = 0
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] avg = 0.0
+[2019-07-02 17:08:36,636] [51537/IO loop] [INFO] [root] [67a57fe4-3309-433a-8790-55afa25335f7] tcp://127.0.0.1:49214 idle ; not saturated
+[2019-07-02 17:08:36,638] [51537/IO loop] [INFO] [root] Scheduler.release_resources called from _remove_from_processing
+[2019-07-02 17:08:36,644] [51537/IO loop] [INFO] [root] Scheduler._add_to_memory called from transition_processing_memory
+[2019-07-02 17:08:36,648] [51537/IO loop] [INFO] [root] Scheduler.report called from _add_to_memory
+[2019-07-02 17:08:36,651] [51537/IO loop] [INFO] [root] Scheduler.transitions called from handle_task_finished
+[2019-07-02 17:08:36,653] [51537/IO loop] [INFO] [root] Scheduler.worker_send called from transition_memory_released
+[2019-07-02 17:08:36,654] [51537/IO loop] [INFO] [root] Scheduler.report called from transition_memory_released
+[2019-07-02 17:08:36,656] [51537/IO loop] [INFO] [root] Scheduler.report_on_key called from transition_released_forgotten
+[2019-07-02 17:08:36,659] [51537/IO loop] [INFO] [root] Scheduler.report called from report_on_key
+[2019-07-02 17:08:36,659] [51537/IO loop] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:36,774] [52438/MainThread] [INFO] [root] Server.handle_long_running: got 1 messages
+[2019-07-02 17:08:36,774] [52438/MainThread] [INFO] [root] Server.handle_long_running: message: {'op': 'delete-data', 'keys': ('ndarray-d75fa45153c3389b7467c77158fdf06f',), 'report': False}
+[2019-07-02 17:08:36,775] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:36,775] [52438/MainThread] [INFO] [root] Server.handle_long_running: Using handler <bound method Worker.delete_data of <Worker: tcp://127.0.0.1:49214, running, stored: 2, running: 0/1, ready: 0, comm: 0, waiting: 0>>
+[2019-07-02 17:08:36,775] [52438/MainThread] [INFO] [root] Worker.delete_data called
+[2019-07-02 17:08:36,779] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:36,784] [52438/MainThread] [INFO] [root] Server.handle_long_running: func: <bound method Worker.ensure_communicating of <Worker: tcp://127.0.0.1:49214, running, stored: 1, running: 0/1, ready: 0, comm: 0, waiting: 0>>
+[2019-07-02 17:08:36,785] [52438/MainThread] [INFO] [root] Worker.__repr__ called
+[2019-07-02 17:08:36,786] [52438/MainThread] [INFO] [root] Server.handle_long_running: func: <bound method Worker.ensure_computing of <Worker: tcp://127.0.0.1:49214, running, stored: 1, running: 0/1, ready: 0, comm: 0, waiting: 0>>
+[2019-07-02 17:08:36,787] [52438/MainThread] [INFO] [root] Worker.ensure_computing called
+[2019-07-02 17:08:36,788] [52438/MainThread] [INFO] [root] Server.handle_long_running: still not closed
+[2019-07-02 17:08:36,795] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args: appending tasks done
+[2019-07-02 17:08:36,806] [51537/MainThread] [INFO] [joblib.dask] Batch.__init__ called from _to_func_args
+[2019-07-02 17:08:36,806] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Submitting to Client
+[2019-07-02 17:08:36,812] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__call__ called
+[2019-07-02 17:08:36,813] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__call__: calling parallel._backend.batch_completed
+[2019-07-02 17:08:36,813] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__call__: calling parallel.print_progress
+[2019-07-02 17:08:36,813] [51537/IO loop] [INFO] [joblib.parallel] Parallel.print_progress called
+[2019-07-02 17:08:36,813] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__call__: taking the lock
+[2019-07-02 17:08:36,827] [51537/MainThread] [INFO] [root] Client.submit called from apply_async
+[2019-07-02 17:08:36,852] [51537/MainThread] [INFO] [root] Client._graph_to_futures called from submit
+[2019-07-02 17:08:36,852] [51537/MainThread] [INFO] [joblib.dask] Batch.__reduce__ called
+[2019-07-02 17:08:36,852] [51537/MainThread] [INFO] [joblib.dask] Batch.__reduce__ called
+[2019-07-02 17:08:36,860] [51537/MainThread] [INFO] [root] Client._send_to_scheduler called from _graph_to_futures
+[2019-07-02 17:08:36,860] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Done submitting to the Client
+[2019-07-02 17:08:36,860] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Added future to tasks
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.dask] <Future: status: pending, key: sum_values-batch-b1b9a0f5d2254077a6f6968cf3d5fa4c>
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.apply_async: Returning future
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.dask] <Future: status: pending, key: sum_values-batch-b1b9a0f5d2254077a6f6968cf3d5fa4c>
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: job of id 1 inserted to back-end
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: leaving the lock
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.parallel] Parallel._dispatch: left the lock
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: leaving the lock after self._dispatch
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: left the lock
+[2019-07-02 17:08:36,861] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__call__: lock taken
+[2019-07-02 17:08:36,861] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__call__: calling Parallel.dispatch_next
+[2019-07-02 17:08:36,862] [51537/IO loop] [INFO] [joblib.parallel] Parallel.dispatch_next called from __call__
+[2019-07-02 17:08:36,862] [51537/IO loop] [INFO] [joblib.parallel] Parallel.dispatch_next: calling self.dispatch_one_batch
+[2019-07-02 17:08:36,861] [51537/MainThread] [INFO] [joblib.parallel] Parallel.__call__ dispatched one batch
+[2019-07-02 17:08:36,867] [51537/IO loop] [INFO] [joblib.parallel] Parallel.dispatch_one_batch called from dispatch_next
+[2019-07-02 17:08:36,867] [51537/IO loop] [INFO] [joblib.parallel] Parallel.dispatch_one_batch: took the lock
+[2019-07-02 17:08:36,869] [51537/MainThread] [INFO] [joblib.parallel] Parallel.dispatch_one_batch called from __call__
+[2019-07-02 17:08:36,870] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend.get_nested_backend called from dispatch_one_batch
+[2019-07-02 17:08:36,872] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend.__init__ called from get_nested_backend
+[2019-07-02 17:08:36,872] [51537/IO loop] [INFO] [joblib.parallel] BatchedCalls.__init__ called
+[2019-07-02 17:08:36,872] [51537/IO loop] [INFO] [joblib.parallel] delayed called
+[2019-07-02 17:08:36,873] [51537/IO loop] [INFO] [joblib.parallel] BatchedCalls.__init__ : wraps 1 objects
+[2019-07-02 17:08:36,873] [51537/IO loop] [INFO] [joblib.parallel] BatchedCalls.__init__: pickle cache: {}
+[2019-07-02 17:08:36,873] [51537/IO loop] [INFO] [joblib.parallel] Parallel.dispatch: calling self._dispatch
+[2019-07-02 17:08:36,874] [51537/IO loop] [INFO] [joblib.parallel] Parallel._dispatch called from dispatch_one_batch
+[2019-07-02 17:08:36,874] [51537/IO loop] [INFO] [joblib.parallel] BatchCompletionCallBack.__init__ called
+[2019-07-02 17:08:36,874] [51537/IO loop] [INFO] [joblib.parallel] Parallel._dispatch: taking the lock
+[2019-07-02 17:08:36,874] [51537/IO loop] [INFO] [joblib.parallel] Parallel._dispatch: took the lock
+[2019-07-02 17:08:36,874] [51537/IO loop] [INFO] [joblib.parallel] Parallel._dispatch: submitting job of id 2 to back-end of size 1
+[2019-07-02 17:08:36,876] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend.apply_async called from _dispatch
+[2019-07-02 17:08:36,877] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args called from apply_async
+[2019-07-02 17:08:36,878] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args: Looping on func.items of len=1
+[2019-07-02 17:08:36,878] [51537/IO loop] [INFO] [joblib.dask] f: <function sum_values at 0x111596840>
+[2019-07-02 17:08:36,878] [51537/IO loop] [INFO] [joblib.dask] DaskDistributedBackend._to_func_args.maybe_to_future: scatter to Client
+[2019-07-02 17:08:36,879] [51537/IO loop] [INFO] [root] Client.scatter called from maybe_to_futures
+[2019-07-02 17:08:38,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:40,611] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:42,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:44,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:46,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:48,611] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:50,611] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:52,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:54,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:56,661] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+[2019-07-02 17:08:58,612] [52438/MainThread] [INFO] [root] Client._update_scheduler_info called from wrapper
+^C[2019-07-02 17:08:59,835] [51537/MainThread] [INFO] [joblib.parallel] Parallel.__call__ back-end teardown
+[2019-07-02 17:08:59,843] [51537/MainThread] [INFO] [joblib.dask] DaskDistributedBackend.stop_call called from __call__
