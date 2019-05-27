@@ -80,12 +80,12 @@ def parameters_folds_generator(nb_folds, X, y, param_grid):
     :return:
     """
 
-    # Used to generate indices
-    folder = KFold(n_splits=nb_folds, shuffle=True, random_state=42)
-
     parameters_generator = ParametersGenerator(param_grid)
 
     for parameters in parameters_generator:
+        # Used to generate indices
+        folder = KFold(n_splits=nb_folds, shuffle=True, random_state=42)
+
         for train_indices, test_indices in folder.split(X, y):
             yield parameters, train_indices, test_indices
 
