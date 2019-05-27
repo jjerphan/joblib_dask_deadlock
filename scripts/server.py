@@ -13,8 +13,8 @@ from dask import delayed
 from joblib import parallel_backend, Parallel, register_parallel_backend
 from joblib._dask import DaskDistributedBackend
 from sklearn import clone, metrics
-from sklearn.datasets import make_classification
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_regression
+from sklearn.ensemble import RandomForestRegressor
 from distributed import Client, Scheduler
 from distributed.bokeh.scheduler import BokehScheduler
 from sklearn.model_selection import KFold
@@ -250,13 +250,14 @@ if __name__ == "__main__":
     time.sleep(5)
 
     # TODO: Generate a similar dataset
-    X, y = make_classification(n_samples=4898, n_features=120,
-                               n_informative=2, n_redundant=2,
-                               n_repeated=0, n_classes=2,
-                               n_clusters_per_class=2,
-                               random_state=42)
+    X, y = make_regression(n_samples=4898,
+                           n_features=11,
+                           n_informative=11,
+                           n_targets=1,
+                           bias=0.0,
+                           random_state=42)
 
-    estimator = RandomForestClassifier()
+    estimator = RandomForestRegressor()
 
     param_grid = {
         'bootstrap': [True],
