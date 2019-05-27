@@ -1,8 +1,13 @@
 # Minimal Reproducible Bug Example: dead lock in `joblib.Parallel._lock` when using `dask` as a back-end
 
+## 🚧 Work in progress
+
 ## Overview
 
 **tl;dr** : aims at reproducing a dead lock when using `joblib.Parallel` with `dask` as a back-end.
+
+**⚠️ For now, I can't reproduce the problem, I am trying to reach the exact same
+setup I had to reproduce it.**
 
 **Context**:
 
@@ -12,27 +17,25 @@ The context is a bit cumbersome:
  - **Process architecture**: subprocesses that are run in containers
     - container are used to run jobs on Kubernetes Clusters typically
     - those process start with an execution of `entrypoint.py` (see [`DockerFile`](./Dockerfile))
-    - a subprocess is spawn from this process and run based on the argument given: 
+    - a subprocess is spawn from this process and run based on the argument given:
         - `server.py` a process that:
-            - spawns the `Scheduler` in a Thread 
-            - spawns the `Client` in the main thread 
+            - spawns the `Scheduler` in a Thread
+            - spawns the `Client` in the main thread
             - defines the task to run in a joblib context in the main thread
         - `worker.py` that spawns a worker that connect to the `Scheduler`
 
 
 **Problem**:
 
-Jobs generally hang or crash.
+Jobs generally hang or crash and `joblib.Parallel` does not return, blocking the main process.
 
 **Exploration and diagnostic**:
 
 To better have an understanding of what's going on, logs have been added on branches based respectively on:
- - [`jjerphan/distributed 1.28.0`]() for logs on `1.28.0` for `distributed`
- - [`jjerphan/joblib 0.13.2`]() for logs on `0.13.2` for `joblib`
+ - [`jjerphan/distributed 1.28.0`](https://github.com/jjerphan/distributed/pull/2) for logs on `1.28.0` for `distributed`
+ - [`jjerphan/joblib 0.13.2`](https://github.com/jjerphan/joblib/pull/1) for logs on `0.13.2` for `joblib`
 
 See the following issue: [`joblib/issues/875`](https://github.com/joblib/joblib/issues/875) for explanation.
-
-> More to come !
 
 ## Reproduce using Kubernetes
 
@@ -107,7 +110,7 @@ pip install -e ./distributed
 
 ### Run
 
-> TODO: not tested but should work, else fix env variables accordingly
+> **TODO:** not tested but should work, else **ask me**
 
 In different terminal, run
 
