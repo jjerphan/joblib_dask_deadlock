@@ -6,9 +6,6 @@
 
 **tl;dr** : aims at reproducing a dead lock when using `joblib.Parallel` with `dask` as a back-end.
 
-**⚠️ For now, I can't reproduce the problem, I am trying to reach the exact same
-setup I had to reproduce it.**
-
 **Context**:
 
 The context is a bit cumbersome:
@@ -29,13 +26,26 @@ The context is a bit cumbersome:
 
 Jobs generally hang or crash and `joblib.Parallel` does not return, blocking the main process.
 
+For now, I can't reproduce the initial problem exactly, several other problems
+arise.
+
 **Exploration and diagnostic**:
 
 To better have an understanding of what's going on, logs have been added on branches based respectively on:
  - [`jjerphan/distributed 1.28.0`](https://github.com/jjerphan/distributed/pull/2) for logs on `1.28.0` for `distributed`
  - [`jjerphan/joblib 0.13.2`](https://github.com/jjerphan/joblib/pull/1) for logs on `0.13.2` for `joblib`
 
-See the following issue: [`joblib/issues/875`](https://github.com/joblib/joblib/issues/875) for explanation.
+See the following issue:
+[`joblib/issues/875`](https://github.com/joblib/joblib/issues/875) fo
+explanation.
+
+**Recap of problems:**
+
+Here is a recap of logs of different problem I had on different setup:
+ -  Hanging on `Client._update_scheduler_info` after submission to
+     `Parallel.__call__`
+    - commit:[3f3fb9b708b5ec74607c3edb5fb32f7fac9eeea1](https://github.com/jjerphan/joblib_dask_deadlock/tree/3f3fb9b708b5ec74607c3edb5fb32f7fac9eeea1)
+    - gist](https://gist.github.com/jjerphan/018908beb8422d7c81fb00198f5fd9f7)
 
 ## Reproduce using Kubernetes
 
@@ -44,6 +54,8 @@ Clone this repo:
 git clone git@github.com:jjerphan/mbr_lock.git
 cd mbr_lock
 ```
+
+Eventually checkout to the different commit listed above.
 
 A simple helm chart has been developed to reproduce the setup and the errors easily.
 
