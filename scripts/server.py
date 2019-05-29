@@ -268,7 +268,7 @@ if __name__ == "__main__":
     }
 
     # TODO : fix values appropriately
-    n_jobs = 4
+    n_jobs = -1
     nb_folds = 3
     verbose = 100
     backend = "dask"
