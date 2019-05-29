@@ -247,9 +247,8 @@ if __name__ == "__main__":
     logging.info("Created Dask Client")
 
     logging.info("Waiting for Workers to connect")
-    time.sleep(5)
+    time.sleep(10)
 
-    # TODO: Generate a similar dataset
     X, y = make_regression(n_samples=4898,
                            n_features=11,
                            n_informative=11,
