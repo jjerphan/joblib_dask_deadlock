@@ -54,21 +54,35 @@ Here is a recap of logs of different problem I had on different setup:
 
 Clone this repo:
 ```bash
-git clone git@github.com:jjerphan/mbr_lock.git
-cd mbr_lock
+git clone git@github.com:jjerphan/joblib_dask_deadlock.git
+cd joblib_dask_deadlock
 ```
 
 Eventually checkout to the different commit listed above.
 
 A simple helm chart has been developed to reproduce the setup and the errors easily.
 
-To do so just run:
+### ⚠️⚠️⚠️ Warning: I don't tag [the image used](https://cloud.docker.com/u/jjerphan/repository/docker/jjerphan/joblib_dask_deadlock) as I am currently inspecting the problem. So you might want to fork this repo and adapt it by publishing your own image.
+
+You can do this building the image locally and pushing it on Docker Hub:
+
+```bash
+docker build -t yourself/joblib_dask_deadlock:latest .
+docker push yourself/joblib_dask_deadlock:latest
+```
+
+Then you will need to edit [`chart/values.yaml`](./chart/values.yaml) by replacing `jjerphan/joblib_dask_deadlock` by `yourself/joblib_dask_deadlock`.
+
+You can start the infrastructure by running:
 ```bash
 helm install  ./chart --name joblib-dask-deadlock-test
 ```
 
-### ⚠️⚠️⚠️ Warning: I don't use tags for [the image used](https://cloud.docker.com/u/jjerphan/repository/docker/jjerphan/joblib_dask_deadlock) as I am currently inspecting the problem. So you might want to fork this repo and adapt it by publishing your own image this image.
+Latter you can the infrastructure by running:
 
+```bash
+helm del --purge joblib-dask-deadlock-test
+```
 
 ### Inspect logs
 
