@@ -286,7 +286,7 @@ if __name__ == "__main__":
 
         gs_estimator.fit(X, y)
 
-        logging.info("Done running 'fit_and_score_estimator'")
+        logging.info("Done running GridSearchCV.fit")
 
         logging.info("Exiting Dask context")
 
