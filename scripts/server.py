@@ -4,23 +4,25 @@ import numbers
 import socket
 import threading
 import time
-from copy import deepcopy
 from itertools import product
 from threading import Thread
 
 import scipy
-from dask import delayed
-from joblib import parallel_backend, Parallel, register_parallel_backend
-from joblib._dask import DaskDistributedBackend
-from sklearn import clone, metrics
-from sklearn.datasets import make_regression
-from sklearn.ensemble import RandomForestRegressor
-from distributed import Client, Scheduler
+from distributed import Client
+from distributed import Scheduler
 from distributed.bokeh.scheduler import BokehScheduler
+from joblib import parallel_backend
+from joblib import register_parallel_backend
+from joblib._dask import DaskDistributedBackend
+from sklearn import metrics
+from sklearn.datasets import make_regression
+from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import KFold
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.utils import safe_indexing
 from sklearn.utils.metaestimators import _safe_split
-from sklearn.utils.validation import _is_arraylike, _num_samples
+from sklearn.utils.validation import _is_arraylike
+from sklearn.utils.validation import _num_samples
 from tornado.ioloop import IOLoop
 
 from utils import setup_log_signal_handling
@@ -247,9 +249,8 @@ if __name__ == "__main__":
     logging.info("Created Dask Client")
 
     logging.info("Waiting for Workers to connect")
-    time.sleep(5)
+    time.sleep(10)
 
-    # TODO: Generate a similar dataset
     X, y = make_regression(n_samples=4898,
                            n_features=11,
                            n_informative=11,
@@ -257,18 +258,16 @@ if __name__ == "__main__":
                            bias=0.0,
                            random_state=42)
 
-    estimator = RandomForestRegressor()
+    estimator = DecisionTreeRegressor()
 
     param_grid = {
-        'bootstrap': [True],
         'max_depth': [10],
         'min_samples_leaf': [1, 2],
         'min_samples_split': [2],
-        'n_estimators': [200]
     }
 
     # TODO : fix values appropriately
-    n_jobs = 4
+    n_jobs = -1
     nb_folds = 3
     verbose = 100
     backend = "dask"
@@ -277,26 +276,17 @@ if __name__ == "__main__":
 
     register_parallel_backend(backend, DaskDistributedBackend)
 
-    joblib_parallel = Parallel(n_jobs=n_jobs, verbose=verbose, pre_dispatch="n_jobs", backend=backend)
+    gs_estimator = GridSearchCV(estimator=estimator, param_grid=param_grid)
+
     logging.info("Entering Dask Context")
     with parallel_backend("dask"):
         logging.info("Entered Dask Context")
 
-        logging.info("Running 'fit_and_score_estimator' with %s jobs and %s as a parallel back-end" %
-                     (n_jobs, backend))
-        results = joblib_parallel(
-            delayed(fit_and_score_estimator)(estimator=clone(estimator),
-                                             X=X,
-                                             y=y,
-                                             scorer=scorer,
-                                             parameters=parameters,
-                                             train_indices=train_indices,
-                                             test_indices=test_indices,
-                                             fit_params=deepcopy(fit_params))
-            for parameters, train_indices, test_indices
-            in parameters_folds_generator(nb_folds, X, y, param_grid))
+        logging.info("Running GridSearchCV.fit with %s as a parallel back-end" % backend)
 
-        logging.info("Done running 'fit_and_score_estimator'")
+        gs_estimator.fit(X, y)
+
+        logging.info("Done running GridSearchCV.fit")
 
         logging.info("Exiting Dask context")
 
