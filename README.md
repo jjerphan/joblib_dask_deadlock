@@ -42,11 +42,14 @@ explanation.
 **Recap of problems:**
 
 Here is a recap of logs of different problem I had on different setup:
- -  Hanging on `Client._update_scheduler_info` after submission to
-     `Parallel.__call__`
+ - Hanging on `Client._update_scheduler_info` after submission to `Parallel.__call__`
     - commit:[3f3fb9b708b5ec74607c3edb5fb32f7fac9eeea1](https://github.com/jjerphan/joblib_dask_deadlock/tree/3f3fb9b708b5ec74607c3edb5fb32f7fac9eeea1)
-    - gist](https://gist.github.com/jjerphan/018908beb8422d7c81fb00198f5fd9f7)
-
+    - [gist](https://gist.github.com/jjerphan/018908beb8422d7c81fb00198f5fd9f7)
+ - Hanging on `Scheduler.handle_task_finished`:
+    - recap: tasks are run on `Workers`, results come back to `Scheduler`, the connection between those two `Servers` can't be closed
+    - commit: [95a34d6bdfd3cbf8f491bab70f02a384feb1cc95](https://github.com/jjerphan/joblib_dask_deadlock/tree/95a34d6bdfd3cbf8f491bab70f02a384feb1cc95)
+    - [gist](https://gist.github.com/jjerphan/9bf4eb3a33e26813067a6aa95b0f484c)
+    
 ## Reproduce using Kubernetes
 
 Clone this repo:
@@ -63,6 +66,9 @@ To do so just run:
 ```bash
 helm install  ./chart --name joblib-dask-deadlock-test
 ```
+
+### ⚠️⚠️⚠️ Warning: I don't use tags for [the image used](https://cloud.docker.com/u/jjerphan/repository/docker/jjerphan/joblib_dask_deadlock) as I am currently inspecting the problem. So you might want to fork this repo and adapt it by publishing your own image this image.
+
 
 ### Inspect logs
 
