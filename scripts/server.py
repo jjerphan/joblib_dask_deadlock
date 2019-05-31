@@ -17,6 +17,7 @@ from sklearn.datasets import make_regression
 from sklearn.ensemble import RandomForestRegressor
 from distributed import Client, Scheduler
 from distributed.bokeh.scheduler import BokehScheduler
+from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import KFold
 from sklearn.utils import safe_indexing
 from sklearn.utils.metaestimators import _safe_split
@@ -276,24 +277,15 @@ if __name__ == "__main__":
 
     register_parallel_backend(backend, DaskDistributedBackend)
 
-    joblib_parallel = Parallel(n_jobs=n_jobs, verbose=verbose, pre_dispatch="n_jobs", backend=backend)
+    gs_estimator = GridSearchCV(estimator=estimator, param_grid=param_grid)
+
     logging.info("Entering Dask Context")
     with parallel_backend("dask"):
         logging.info("Entered Dask Context")
 
-        logging.info("Running 'fit_and_score_estimator' with %s jobs and %s as a parallel back-end" %
-                     (n_jobs, backend))
-        results = joblib_parallel(
-            delayed(fit_and_score_estimator)(estimator=clone(estimator),
-                                             X=X,
-                                             y=y,
-                                             scorer=scorer,
-                                             parameters=parameters,
-                                             train_indices=train_indices,
-                                             test_indices=test_indices,
-                                             fit_params=deepcopy(fit_params))
-            for parameters, train_indices, test_indices
-            in parameters_folds_generator(nb_folds, X, y, param_grid))
+        logging.info("Running GridSearchCV.fit with %s as a parallel back-end" % backend)
+
+        gs_estimator.fit(X, y)
 
         logging.info("Done running 'fit_and_score_estimator'")
 
