@@ -4,24 +4,25 @@ import numbers
 import socket
 import threading
 import time
-from copy import deepcopy
 from itertools import product
 from threading import Thread
 
 import scipy
-from dask import delayed
-from joblib import parallel_backend, Parallel, register_parallel_backend
-from joblib._dask import DaskDistributedBackend
-from sklearn import clone, metrics
-from sklearn.datasets import make_regression
-from sklearn.ensemble import RandomForestRegressor
-from distributed import Client, Scheduler
+from distributed import Client
+from distributed import Scheduler
 from distributed.bokeh.scheduler import BokehScheduler
+from joblib import parallel_backend
+from joblib import register_parallel_backend
+from joblib._dask import DaskDistributedBackend
+from sklearn import metrics
+from sklearn.datasets import make_regression
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import KFold
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.utils import safe_indexing
 from sklearn.utils.metaestimators import _safe_split
-from sklearn.utils.validation import _is_arraylike, _num_samples
+from sklearn.utils.validation import _is_arraylike
+from sklearn.utils.validation import _num_samples
 from tornado.ioloop import IOLoop
 
 from utils import setup_log_signal_handling
@@ -257,14 +258,12 @@ if __name__ == "__main__":
                            bias=0.0,
                            random_state=42)
 
-    estimator = RandomForestRegressor()
+    estimator = DecisionTreeRegressor()
 
     param_grid = {
-        'bootstrap': [True],
         'max_depth': [10],
         'min_samples_leaf': [1, 2],
         'min_samples_split': [2],
-        'n_estimators': [200]
     }
 
     # TODO : fix values appropriately
