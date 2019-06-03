@@ -279,7 +279,7 @@ if __name__ == "__main__":
     gs_estimator = GridSearchCV(estimator=estimator, param_grid=param_grid)
 
     logging.info("Entering Dask Context")
-    with parallel_backend("dask"):
+    with parallel_backend("dask", scatter=[X, y]):
         logging.info("Entered Dask Context")
 
         logging.info("Running GridSearchCV.fit with %s as a parallel back-end" % backend)
