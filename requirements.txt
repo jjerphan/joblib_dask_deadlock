@@ -5,3 +5,4 @@ scikit-learn>=0.20,<0.21
 scipy>=1.1,<1.2
 tornado>=5.1,<5.2
 bokeh==0.13
+dask-ml==0.13.0
