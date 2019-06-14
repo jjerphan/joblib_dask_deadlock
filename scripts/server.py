@@ -1,4 +1,5 @@
 import inspect
+import itertools
 import logging
 import numbers
 import socket
@@ -7,6 +8,7 @@ import time
 from copy import deepcopy
 from itertools import product
 from threading import Thread
+from functools import reduce
 
 import scipy
 from dask import delayed
@@ -90,7 +92,7 @@ def parameters_folds_generator(nb_folds, X, y, param_grid):
             yield parameters, train_indices, test_indices
 
 
-def fit_and_score_estimator(estimator, X, y, scorer, parameters, train, test, fit_params):
+def fit_and_score_estimator(estimator, X, y, scorer, parameters, train_indices, test_indices, fit_params):
     """
     Custom function to fit and score a given estimator.
 
@@ -99,8 +101,8 @@ def fit_and_score_estimator(estimator, X, y, scorer, parameters, train, test, fi
     :param y: an array-like, 2 axes
     :param scorer: a function
     :param parameters: dict
-    :param train: an array-like, 1 axe
-    :param test: an array-like, 1 axe
+    :param train_indices: an array-like, 1 axe
+    :param test_indices: an array-like, 1 axe
     :param fit_params: dict
     :return:
     """
@@ -124,13 +126,13 @@ def fit_and_score_estimator(estimator, X, y, scorer, parameters, train, test, fi
 
     start_time = time.time()
 
-    X_train, y_train = _safe_split(estimator, X, y, train)
-    X_test, y_test = _safe_split(estimator, X, y, test, train)
+    X_train, y_train = _safe_split(estimator, X, y, train_indices)
+    X_test, y_test = _safe_split(estimator, X, y, test_indices, train_indices)
 
     # Adjust length of sample weights
     fit_params = fit_params if fit_params is not None else {}
 
-    fit_params = dict([(k, index_params(X, v, train)) for k, v in fit_params.items()])
+    fit_params = dict([(k, index_params(X, v, train_indices)) for k, v in fit_params.items()])
 
     # Even with the specific handling done before (the registration back-end and the
     # specification of joblib.Parallel tasks), Dask is used.
@@ -179,8 +181,8 @@ def fit_and_score_estimator(estimator, X, y, scorer, parameters, train, test, fi
                                  % (str(score), type(score)))
             return score
 
-        test_score = score(estimator, X_test, y_test, scorer, indices=test)
-        train_score = score(estimator, X_train, y_train, scorer, indices=train)
+        test_score = score(estimator, X_test, y_test, scorer, indices=test_indices)
+        train_score = score(estimator, X_train, y_train, scorer, indices=train_indices)
         score_time = time.time() - start_time - fit_time
 
     end_msg = "Done: fit_time=%.1fs score_time=%.1fs test_score=%s" % (fit_time, score_time, test_score)
@@ -266,9 +268,13 @@ if __name__ == "__main__":
         'n_estimators': [200]
     }
 
-    # TODO : fix values appropriately
     n_jobs = -1
     nb_folds = 3
+    cardinality_cartesian_product = reduce(lambda a, b: a * b, map(lambda values: len(values), param_grid.values()))
+
+    # We dispatch all the tasks in one Batch
+    batch_size = nb_folds * cardinality_cartesian_product
+
     verbose = 100
     backend = "dask"
     fit_params = {}
@@ -276,7 +282,11 @@ if __name__ == "__main__":
 
     register_parallel_backend(backend, DaskDistributedBackend)
 
-    joblib_parallel = Parallel(n_jobs=n_jobs, verbose=verbose, pre_dispatch="n_jobs", backend=backend)
+    joblib_parallel = Parallel(n_jobs=n_jobs,
+                               verbose=verbose,
+                               pre_dispatch="n_jobs",
+                               backend=backend,
+                               batch_size=batch_size)
     logging.info("Entering Dask Context")
     with parallel_backend("dask"):
         logging.info("Entered Dask Context")
