@@ -11,8 +11,7 @@ from threading import Thread
 from functools import reduce
 
 import scipy
-from dask import delayed
-from joblib import parallel_backend, Parallel, register_parallel_backend
+from joblib import parallel_backend, Parallel, register_parallel_backend, delayed
 from joblib._dask import DaskDistributedBackend
 from sklearn import clone, metrics
 from sklearn.datasets import make_regression
@@ -181,8 +180,8 @@ def fit_and_score_estimator(estimator, X, y, scorer, parameters, train_indices, 
                                  % (str(score), type(score)))
             return score
 
-        test_score = score(estimator, X_test, y_test, scorer, indices=test_indices)
-        train_score = score(estimator, X_train, y_train, scorer, indices=train_indices)
+        test_score = 1  # score(estimator, X_test, y_test, scorer, indices=test_indices)
+        train_score = 1  # score(estimator, X_train, y_train, scorer, indices=train_indices)
         score_time = time.time() - start_time - fit_time
 
     end_msg = "Done: fit_time=%.1fs score_time=%.1fs test_score=%s" % (fit_time, score_time, test_score)
@@ -312,3 +311,6 @@ if __name__ == "__main__":
     logging.info("Exited Dask context")
 
     logging.info("Done")
+    logging.info("Results:")
+    for res in results:
+        logging.info(res)
