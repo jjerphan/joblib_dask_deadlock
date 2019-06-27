@@ -38,6 +38,16 @@ class Results:
         self._fit_time = fit_time
         self._num_samples = num_samples
 
+    def __repr__(self):
+        str_repr =  "Parameters: {}\n".format(self._parameters)
+        str_repr += "Test Score: {}\n".format(self._test_score)
+        str_repr += "Train Score: {}\n".format(self._train_score)
+        str_repr += "Score Time: {}\n".format(self._score_time)
+        str_repr += "Fit Time: {}\n".format(self._fit_time)
+        str_repr += "Num samples: {}\n".format(self._num_samples)
+
+        return str_repr
+
 
 class ParametersGenerator(object):
     """ Generate hyper-parameters point on a grid. """
@@ -311,6 +321,6 @@ if __name__ == "__main__":
     logging.info("Exited Dask context")
 
     logging.info("Done")
-    logging.info("Results:")
+    logging.info("{} results:".format(len(results)))
     for res in results:
         logging.info(res)
