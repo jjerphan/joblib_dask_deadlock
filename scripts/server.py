@@ -52,7 +52,6 @@ if __name__ == "__main__":
         loop = IOLoop.current()
         loop.start()
 
-
     dask_scheduler_thread = Thread(target=start_dask_scheduler)
 
     # We need to activate the daemon explicitly here so that
@@ -86,7 +85,7 @@ if __name__ == "__main__":
         logging.info("Entered Dask Context")
         logging.info("Running 'dummy_task' with %s jobs and %s as a parallel back-end" % (n_jobs, backend))
 
-        results = joblib_parallel(delayed(dummy_task)(i for i in range(100000000)))
+        results = joblib_parallel(delayed(dummy_task)(i) for i in range(1))
 
         logging.info("Done running 'fit_and_score_estimator'")
         logging.info("Exiting Dask context")

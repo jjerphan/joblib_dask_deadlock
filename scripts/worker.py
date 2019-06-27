@@ -6,7 +6,6 @@ import logging
 import os
 import signal
 import platform
-import socket
 from threading import Thread
 from time import sleep
 
@@ -36,7 +35,7 @@ if __name__ == "__main__":
 
     def worker_watchdog():
         """
-        A routine that watches the state of the Worker
+        A routine that watches =the state of the Worker
         that is spawned and that kills it when possible.
 
         This is used to resolve a teardown problem when
