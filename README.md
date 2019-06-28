@@ -1,4 +1,4 @@
-# Minimal Reproducible Bug Example: dead lock in `joblib.Parallel._lock` when using `dask` as a back-end
+# Minimal Reproducible Bug Example: dead lock in `Parallel` when using `dask` as a back-end
 
 ## 🚧 Work in progress
 
