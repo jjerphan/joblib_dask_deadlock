@@ -15,10 +15,10 @@ from joblib import parallel_backend, Parallel, register_parallel_backend, delaye
 from joblib._dask import DaskDistributedBackend
 from sklearn import clone, metrics
 from sklearn.datasets import make_regression
-from sklearn.ensemble import RandomForestRegressor
 from distributed import Client, Scheduler
 from distributed.bokeh.scheduler import BokehScheduler
 from sklearn.model_selection import KFold
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.utils import safe_indexing
 from sklearn.utils.metaestimators import _safe_split
 from sklearn.utils.validation import _is_arraylike, _num_samples
@@ -216,39 +216,28 @@ if __name__ == "__main__":
     logging.info("Started reproducible example")
     scheduler_port = 8786
 
-    def start_dask_scheduler():
-        """
-        Start the Scheduler in this subprocess.
+    services = {('bokeh', 8787): (BokehScheduler, {'prefix': None})}
 
-        Context: A Dask Client is started in the doctor server and needs
-        to connect to the Dask Scheduler
+    scheduler = Scheduler(services=services)
 
-        :return:
-        """
-        services = {('bokeh', 8787): (BokehScheduler, {'prefix': None})}
+    scheduler_location = 'tcp://:%s' % scheduler_port
+    scheduler.start(scheduler_location)
 
-        scheduler = Scheduler(services=services)
+    # Tornado IOLoops are a way for Schedulers, Workers and Clients to communicate.
+    # Here, we get the IOLoop of the process and start it.
+    # It is used by the Scheduler to communicate with Workers from the outside.
+    loop = IOLoop.current()
 
-        scheduler_location = 'tcp://:%s' % scheduler_port
-        scheduler.start(scheduler_location)
-
-        # Tornado IOLoops are a way for Schedulers, Workers and Clients to communicate.
-        # Here, we get the IOLoop of the process and start it.
-        # It is used by the Scheduler to communicate with Workers from the outside.
-        loop = IOLoop.current()
-        loop.start()
-
-
-    dask_scheduler_thread = Thread(target=start_dask_scheduler)
+    dask_scheduler_loop_thread = Thread(target=loop.start)
 
     # We need to activate the daemon explicitly here so that
     # the thread dedicated to the Scheduler is stopped when
     # the main process exits.
     # see: https://docs.python.org/2/library/threading.html#threading.Thread.daemon
-    dask_scheduler_thread.daemon = True
+    dask_scheduler_loop_thread.daemon = True
 
     logging.info("Dask Scheduler: starting on port %s" % scheduler_port)
-    dask_scheduler_thread.start()
+    dask_scheduler_loop_thread.start()
     logging.info("Dask Scheduler: started on port %s" % scheduler_port)
 
     logging.info("Creating Dask Client")
@@ -267,14 +256,11 @@ if __name__ == "__main__":
                            bias=0.0,
                            random_state=42)
 
-    estimator = RandomForestRegressor()
+    estimator = DecisionTreeRegressor()
 
     param_grid = {
-        'bootstrap': [True],
-        'max_depth': [10],
         'min_samples_leaf': [1, 2],
         'min_samples_split': [2],
-        'n_estimators': [200]
     }
 
     n_jobs = -1
@@ -296,12 +282,12 @@ if __name__ == "__main__":
                                pre_dispatch="n_jobs",
                                backend=backend,
                                batch_size=batch_size)
+
     logging.info("Entering Dask Context")
     with parallel_backend("dask"):
         logging.info("Entered Dask Context")
 
-        logging.info("Running 'fit_and_score_estimator' with %s jobs and %s as a parallel back-end" %
-                     (n_jobs, backend))
+        logging.info("Running 'fit_and_score_estimator' with %s jobs and %s as a parallel back-end" % (n_jobs, backend))
         results = joblib_parallel(
             delayed(fit_and_score_estimator)(estimator=clone(estimator),
                                              X=X,
