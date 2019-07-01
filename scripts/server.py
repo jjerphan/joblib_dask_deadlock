@@ -3,7 +3,7 @@ import socket
 import time
 from threading import Thread
 
-from dask import delayed
+from joblib import delayed
 from distributed import Client
 from distributed import Scheduler
 from distributed.bokeh.scheduler import BokehScheduler
