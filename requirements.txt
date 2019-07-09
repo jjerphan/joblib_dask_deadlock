@@ -6,5 +6,5 @@ scikit-learn>=0.20,<0.21
 scipy>=1.1,<1.2
 tornado>=5.1,<5.2
 bokeh==0.13
--e git+git@github.com:jjerphan/joblib.git@9871cc2c4580d13847a9b8a1cbcfefb1cb4bf014#egg=joblib
--e git+git@github.com:jjerphan/distributed.git@6ea010bcf21db7445bd26286966f59a7e75ab390#egg=distributed
+-e git+https://github.com/jjerphan/joblib.git@9871cc2c4580d13847a9b8a1cbcfefb1cb4bf014#egg=joblib
+-e git+https://github.com/jjerphan/distributed.git@6ea010bcf21db7445bd26286966f59a7e75ab390#egg=distributed
