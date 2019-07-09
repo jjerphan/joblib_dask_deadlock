@@ -19,15 +19,16 @@ X, y = make_classification(n_samples=16870,
 estimator = DecisionTreeRegressor()
 
 param_grid = {
-    'max_depth': [10],
-    'min_samples_leaf': [1, 2],
+    'max_depth': [3, 4, 5, 6, 8, 10, 12],
+    'min_samples_leaf': [1, 2, 3, 4, 5, 6, 7, 8],
     'min_samples_split': [2],
 }
+
 
 gs_estimator = DaskGridSearchCV(estimator=estimator,
                                 param_grid=param_grid)
 
-cluster = LocalCluster()
+cluster = LocalCluster(n_workers=10)
 client = Client(cluster)
 
 with parallel_backend("dask"):
