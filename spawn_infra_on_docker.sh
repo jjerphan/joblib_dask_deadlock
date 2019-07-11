@@ -4,7 +4,7 @@
 # Run infrastructure locally using Docker
 #
 
-NB_WORKERS=10
+NB_WORKERS=${1:-10}
 REPOSITORY_NAME=jjerphan/joblib_dask_deadlock
 TAG=dask_ml
 
