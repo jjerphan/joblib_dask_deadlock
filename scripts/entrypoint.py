@@ -12,7 +12,9 @@ if __name__ == "__main__":
     # Determining if running a Worker or a Scheduler
     to_launch = sys.argv[1]
 
-    assert to_launch in {"server", "worker"}
+    correct_arg = {"server", "worker"}
+
+    assert to_launch in correct_arg, "Argument {} is not in {}".format(to_launch, correct_arg)
     dir_path = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 
     logging.info("Launching a %s" % to_launch)

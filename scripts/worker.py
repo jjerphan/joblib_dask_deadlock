@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     scheduler_address = os.getenv('DASK_SCHEDULER_ADDRESS', "192.168.65.3")
     scheduler_port = os.getenv('DASK_SCHEDULER_PORT', 8786)
-    death_time_out = 30
+    death_time_out = 60  # in seconds
 
     scheduler = "%s:%s" % (scheduler_address, scheduler_port)
 
