@@ -1,4 +1,4 @@
-# Minimal Reproducible Bug Example: for [`distributed#2149`](https://github.com/dask/distributed/issues/2149)
+# WIP : Trying to reproduce error with Dask ML
 
 ### Setup
 
